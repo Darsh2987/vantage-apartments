@@ -1,0 +1,50 @@
+.single-post-container {
+  position: relative;
+  top: 120px;
+}
+
+.single-post-content {
+  margin: 1rem 0;
+}
+
+.single-post-heading, .single-post-main-info, .single-post-apartment-details, .single-post-location-details, .single-post-building-details {
+  width: 90%;
+  margin: 2rem auto;
+}
+
+.single-post-heading {
+  color: $primary-green;
+}
+
+.single-post-main-info h3 {
+  margin: 1rem 0;
+  font-weight: 100;
+}
+
+h2 {
+  color: $primary-green;
+  margin: 1rem auto;
+}
+
+.single-post-main-info {
+  margin-bottom: 1rem;
+}
+
+.single-post-apartment-details {
+  padding-bottom: 1rem;
+  border-bottom: 4px solid $faded-green;
+}
+
+@media(min-width: 768px) {
+
+  .single-post-container {
+    top: 145px;
+  }
+}
+
+@media(min-width: 1000px) {
+
+  .single-post-container {
+    top: 135px;
+  }
+}

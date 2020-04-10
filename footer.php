@@ -34,7 +34,7 @@
         <p>Copyright © <span id="fullyear"></span> <strong>Vantage Apartments</strong> All rights reserved</p>
       </div>
     </footer>
-
+  
     <?php wp_footer(); ?>
   </body>
 </html>

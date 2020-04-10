@@ -1,0 +1,22 @@
+.single-post-content .single-post-image-gallery {
+  overflow: hidden;
+  width: 100%;
+  height: 200px;
+}
+
+.single-post-content .single-post-image-gallery .wp-block-group__inner-container {
+  position: relative;
+  width: 400%;
+  margin: 0;
+  left: 0;
+  animation: 25s slider infinite ease-in-out;
+}
+
+.single-post-content .single-post-image-gallery .wp-block-group__inner-container figure {
+  float: left;
+  width: 25%;
+}
+
+.single-post-content .single-post-image-gallery .wp-block-group__inner-container figure img {
+  width: 100%;
+}

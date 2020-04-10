@@ -1,6 +1,14 @@
 header {
   width: 100%;
   background: $primary-green;
+  position: fixed;
+  top: 0;
+  z-index: 2;
+}
+
+.header-logo {
+  width: 250px;
+  margin: 1rem 0;
 }
 
 .header-logo-and-contact {
@@ -12,11 +20,6 @@ header {
   display: grid;
   grid-template-columns: 80% 10%;
   justify-content: space-between;
-}
-
-.header-logo {
-  width: 100%;
-  margin: 1rem 0;
 }
 
 .header-phone-number, .header-email {
