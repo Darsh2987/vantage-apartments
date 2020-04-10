@@ -1,0 +1,54 @@
+
+@media (max-width: 767px) {
+  header .nav  {
+    position: fixed;
+    top: 0px;
+    right: 0px;
+    left: 1100px;
+    bottom: 0px;
+    background-color: rgba(0, 0, 0, 0.9);
+    opacity: 0;
+    width: 100%;
+    transition: all ease-in-out 0.6s;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .nav--show {
+    opacity: 1;
+    left: 0px;
+    transition: all ease-in-out 0.4s;
+    z-index: 2;
+  }
+
+}
+
+.house-icon {
+  width: 25px;
+  margin-top: 1.2rem;
+}
+
+@media (min-width: 768px) {
+  header .nav  {
+    display: block;
+    text-align: right;
+    position: relative;
+    bottom: 25px;
+  }
+
+  header nav li  {
+    display: inline;
+    margin-left: 1rem;
+    color: #fff;
+  }
+
+  .house-icon {
+    display: none;
+  }
+
+  .nav .nav-phone, .nav .nav-email {
+    display: none;
+  }
+}

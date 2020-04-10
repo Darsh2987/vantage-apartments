@@ -1,0 +1,9 @@
+@import "global/global";
+@import "global/variables";
+
+@import "modules/header/header";
+@import "modules/header/nav";
+
+@import "modules/footer";
+
+// sass --watch scss/imports.scss:style.css

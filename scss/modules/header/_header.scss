@@ -1,0 +1,89 @@
+header {
+  width: 100%;
+  background: $primary-green;
+}
+
+.header-logo-and-contact {
+  width: 90%;
+  margin: 0 auto;
+}
+
+.header-logo-and-hamburger {
+  display: grid;
+  grid-template-columns: 80% 10%;
+  justify-content: space-between;
+}
+
+.header-logo {
+  width: 100%;
+  margin: 1rem 0;
+}
+
+.header-phone-number, .header-email {
+    display: flex;
+    align-items: center;
+  }
+
+.header-phone-number {
+  margin-left: 0.3rem;
+}
+
+.header-phone-number img {
+  width: 19px;
+  margin-right: 0.2rem;
+}
+
+.header-phone-number p, .header-email a {
+  color: #fff;
+  font-size: 1.1rem;
+}
+
+.header-email img {
+  width: 32px;
+}
+
+@media (min-width: 768px) {
+  .header-content {
+    width: 90%;
+    margin: 0 auto;
+  }
+
+  .header-logo {
+    width: 250px;
+    margin-top: 1.5rem;
+  }
+
+  .header-contact-and-nav {
+    margin-top: -0.5rem;
+  }
+
+  .header-phone-number, .header-email {
+    display: flex;
+    align-items: center;
+  }
+
+  .header-phone-number p, .header-email a {
+    color: #fff;
+    font-size: 1rem;
+    z-index: 2;
+  }
+
+  .header-phone-number img {
+    width: 19px;
+    margin-right: 0.2rem;
+  }
+
+  .header-email img {
+    width: 32px;
+  }
+}
+
+@media (min-width: 1000px) {
+
+  .header-contact-info {
+    display: flex;
+    width: 400px;
+    margin-left: .5rem;
+    justify-content: space-between;
+  }
+}
