@@ -16,6 +16,7 @@ header {
   position: fixed;
   top: 0;
   z-index: 2;
+  padding-bottom: 1rem;
 }
 
 .header-logo {
@@ -58,9 +59,16 @@ header {
 }
 
 @media (min-width: 768px) {
+  header {
+    padding-bottom: 0;
+  }
+
+  .header-logo-and-contact {
+    width: 90%;
+  }
+
   .header-content {
     width: 90%;
-    margin: 0 auto;
   }
 
   .header-logo {
@@ -190,7 +198,7 @@ header {
   overflow: hidden;
   position: relative;
   top: 133px;
-  height: 30vh;
+  height: 300px;
 }
 
 .image-slider {
@@ -211,28 +219,33 @@ header {
 }
 
 .image-slider-hampton {
-  background-image: url("/wp-content/themes/vantage/images/image-slider/image-slider-hampton.jpg");
+  background-image: url("/wp-content/themes/vantageapartments/images/image-slider/image-slider-hampton.jpg");
 }
 
 .image-slider-twickenham {
-  background-image: url("/wp-content/themes/vantage/images/image-slider/image-slider-twickenham.jpg");
+  background-image: url("/wp-content/themes/vantageapartments/images/image-slider/image-slider-twickenham.jpg");
 }
 
 .image-slider-kingston {
-  background-image: url("/wp-content/themes/vantage/images/image-slider/image-slider-kingston.jpg");
+  background-image: url("/wp-content/themes/vantageapartments/images/image-slider/image-slider-kingston.jpg");
 }
 
 .image-slider-teddington {
-  background-image: url("/wp-content/themes/vantage/images/image-slider/image-slider-teddington.jpg");
+  background-image: url("/wp-content/themes/vantageapartments/images/image-slider/image-slider-teddington.jpg");
 }
 
 .image-slider-feltham {
-  background-image: url("/wp-content/themes/vantage/images/image-slider/image-slider-feltham.jpg");
+  background-image: url("/wp-content/themes/vantageapartments/images/image-slider/image-slider-feltham.jpg");
 }
 
+@media (min-width: 1200px) {
+  .image-slider-container {
+    height: 400px;
+  }
+}
 .single-post-container {
   position: relative;
-  top: 120px;
+  top: 140px;
 }
 
 .single-post-content {
@@ -248,6 +261,10 @@ header {
   color: #006a52;
 }
 
+.single-post-main-info {
+  margin: 2rem auto;
+}
+
 .single-post-main-info h3 {
   margin: 1rem 0;
   font-weight: 100;
@@ -258,13 +275,13 @@ h2 {
   margin: 1rem auto;
 }
 
-.single-post-main-info {
-  margin-bottom: 1rem;
-}
-
 .single-post-apartment-details {
   padding-bottom: 1rem;
   border-bottom: 4px solid rgba(0, 106, 82, 0.3);
+}
+
+.single-post-map {
+  width: 100%;
 }
 
 @media (min-width: 768px) {
@@ -276,11 +293,105 @@ h2 {
   .single-post-container {
     top: 135px;
   }
+
+  .single-post-heading, .single-post-main-info, .single-post-apartment-details, .single-post-location-details, .single-post-building-details {
+    margin-top: 0.5rem;
+    margin-bottom: 0.5rem;
+  }
+
+  .single-post-heading {
+    grid-area: postheading;
+  }
+
+  .single-post-main-info {
+    grid-area: postmaininfo;
+  }
+
+  .single-post-image-gallery {
+    grid-area: imagegallery;
+  }
+
+  .single-post-apartment-details {
+    grid-area: apartmentdetails;
+    border-bottom: none;
+  }
+
+  .single-post-location-details {
+    grid-area: locationdetails;
+    margin-bottom: 0rem;
+    padding: 0rem 2rem;
+  }
+
+  .single-post-location-details, .single-post-map {
+    background: #CCF0E8;
+  }
+
+  .single-post-map {
+    grid-area: postmap;
+    width: 90%;
+    padding: 1.5rem;
+    justify-self: center;
+  }
+
+  .single-post-building-details {
+    grid-area: buildingdetails;
+    margin-top: 1rem;
+  }
+
+  .single-post-building-details h2 {
+    margin-top: 0rem;
+  }
+
+  .single-post-heading-and-info {
+    display: grid;
+    grid-template-columns: 50% 45%;
+    grid-template-areas: "postheading ." "postmaininfo imagegallery" "locationdetails apartmentdetails" "postmap buildingdetails";
+    justify-content: center;
+  }
+
+  .single-post-content p {
+    font-size: 1.1rem;
+  }
+}
+@keyframes slider {
+  0% {
+    left: 0%;
+  }
+  15% {
+    left: 0%;
+  }
+  20% {
+    left: -100%;
+  }
+  35% {
+    left: -100%;
+  }
+  40% {
+    left: -200%;
+  }
+  55% {
+    left: -200%;
+  }
+  60% {
+    left: -300%;
+  }
+  75% {
+    left: -300%;
+  }
+  80% {
+    left: -400%;
+  }
+  95% {
+    left: -400%;
+  }
+  100% {
+    left: -500%;
+  }
 }
 .single-post-content .single-post-image-gallery {
   overflow: hidden;
   width: 100%;
-  height: 200px;
+  height: 250px;
 }
 
 .single-post-content .single-post-image-gallery .wp-block-group__inner-container {
@@ -300,9 +411,24 @@ h2 {
   width: 100%;
 }
 
+@media (min-width: 600px) {
+  .single-post-content .single-post-image-gallery {
+    height: 350px;
+  }
+}
+@media (min-width: 768px) {
+  .single-post-content .single-post-image-gallery {
+    height: 400px;
+  }
+}
+@media (min-width: 1700px) {
+  .single-post-content .single-post-image-gallery {
+    height: 500px;
+  }
+}
 footer {
   position: relative;
-  top: 120px;
+  top: 140px;
   width: 100%;
   background-color: #323031;
   color: #fff;
@@ -315,7 +441,7 @@ footer {
   display: flex;
   padding: 1rem 0;
   justify-content: space-evenly;
-  margin-left: 1rem;
+  margin: 0 auto;
 }
 
 .footer-content-nav {

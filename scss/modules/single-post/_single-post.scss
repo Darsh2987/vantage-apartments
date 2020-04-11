@@ -1,6 +1,6 @@
 .single-post-container {
   position: relative;
-  top: 120px;
+  top: 140px;
 }
 
 .single-post-content {
@@ -16,6 +16,11 @@
   color: $primary-green;
 }
 
+
+.single-post-main-info {
+  margin: 2rem auto;
+}
+
 .single-post-main-info h3 {
   margin: 1rem 0;
   font-weight: 100;
@@ -26,13 +31,14 @@ h2 {
   margin: 1rem auto;
 }
 
-.single-post-main-info {
-  margin-bottom: 1rem;
-}
-
 .single-post-apartment-details {
   padding-bottom: 1rem;
   border-bottom: 4px solid $faded-green;
+}
+
+
+.single-post-map {
+  width: 100%;
 }
 
 @media(min-width: 768px) {
@@ -43,8 +49,69 @@ h2 {
 }
 
 @media(min-width: 1000px) {
-
   .single-post-container {
     top: 135px;
+  }
+
+  .single-post-heading, .single-post-main-info, .single-post-apartment-details, .single-post-location-details, .single-post-building-details {
+    margin-top: 0.5rem;
+    margin-bottom: 0.5rem
+  }
+  .single-post-heading {
+    grid-area: postheading;
+  }
+
+  .single-post-main-info{
+    grid-area: postmaininfo;
+  }
+
+  .single-post-image-gallery {
+    grid-area: imagegallery;
+  }
+
+  .single-post-apartment-details {
+    grid-area: apartmentdetails;
+    border-bottom: none;
+  }
+
+  .single-post-location-details {
+    grid-area: locationdetails;
+    margin-bottom: 0rem;
+    padding: 0rem 2rem;
+  }
+
+   .single-post-location-details, .single-post-map {
+    background: $light-green;
+  }
+
+  .single-post-map {
+    grid-area: postmap;
+    width: 90%;
+    padding: 1.5rem;
+    justify-self: center;
+  }
+
+  .single-post-building-details {
+    grid-area: buildingdetails;
+    margin-top: 1rem;
+  }
+
+  .single-post-building-details h2 {
+    margin-top: 0rem;
+  }
+
+  .single-post-heading-and-info {
+    display: grid;
+    grid-template-columns: 50% 45%;
+    grid-template-areas: 
+    "postheading ."
+    "postmaininfo imagegallery"
+    "locationdetails apartmentdetails"
+    "postmap buildingdetails";
+    justify-content: center;
+  }
+
+  .single-post-content p {
+    font-size: 1.1rem;
   }
 }
