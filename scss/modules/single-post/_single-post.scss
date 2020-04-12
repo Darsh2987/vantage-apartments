@@ -1,3 +1,17 @@
+svg {
+  position: absolute;
+  top: 132px;
+}
+
+.svg-middle {
+  top: 87px;
+}
+
+.svg-top {
+  top: 15px;
+  right: 185px;
+}
+
 .single-post-container {
   position: relative;
   top: 140px;
@@ -46,6 +60,10 @@ h2 {
   .single-post-container {
     top: 145px;
   }
+
+  .single-post-heading {
+    font-size: 2.5rem
+  }
 }
 
 @media(min-width: 1000px) {
@@ -81,7 +99,7 @@ h2 {
   }
 
    .single-post-location-details, .single-post-map {
-    background: $light-green;
+    background: rgba(127,180,168, 0.1);
   }
 
   .single-post-map {

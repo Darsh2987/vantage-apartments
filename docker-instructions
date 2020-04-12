@@ -1,16 +1,16 @@
 
 These are Docker instructions to change the permissions for the wp-content folder allowing to upload images.
 
-1 - Make sure you are in the project folder 
+1 - open terminal and make sure you are in the project folder 
 
-2 - open terminal and execute the following
+2 - execute the following commands
 
 -- docker-compose exec wordpress bash - this gets you into the docker container
 
 
 -- ls - to show folders and files
 
--- ls -lah - this wil show the folder and who has ownership of them
+-- ls -lah - this will show the folder and who has ownership of them
 
 -- chown -R www-data:www-data wp-content - this will allow you to change who has access to "wp-content" which is currently set to "root" - need to change to www-data www-data
 
@@ -21,3 +21,6 @@ These are Docker instructions to change the permissions for the wp-content folde
 type "cd" to go into a directory
 
 press "ctrl" and "d" and exit docker container.
+
+
+command: sh -c "docker-compose exec wordpress bash && ls -lah && chown -R www-data:www-data wp-content"
