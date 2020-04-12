@@ -219,23 +219,23 @@ header {
 }
 
 .image-slider-hampton {
-  background-image: url("/wp-content/themes/vantageapartments/images/image-slider/image-slider-hampton.jpg");
+  background-image: url("images/image-slider/image-slider-hampton.jpg");
 }
 
 .image-slider-twickenham {
-  background-image: url("/wp-content/themes/vantageapartments/images/image-slider/image-slider-twickenham.jpg");
+  background-image: url("images/image-slider/image-slider-twickenham.jpg");
 }
 
 .image-slider-kingston {
-  background-image: url("/wp-content/themes/vantageapartments/images/image-slider/image-slider-kingston.jpg");
+  background-image: url("images/image-slider/image-slider-kingston.jpg");
 }
 
 .image-slider-teddington {
-  background-image: url("/wp-content/themes/vantageapartments/images/image-slider/image-slider-teddington.jpg");
+  background-image: url("images/image-slider/image-slider-teddington.jpg");
 }
 
 .image-slider-feltham {
-  background-image: url("/wp-content/themes/vantageapartments/images/image-slider/image-slider-feltham.jpg");
+  background-image: url("images/image-slider/image-slider-feltham.jpg");
 }
 
 @media (min-width: 1200px) {
