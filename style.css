@@ -243,13 +243,24 @@ header {
     height: 400px;
   }
 }
-.front-page-location-post-grid {
+.mobile-front-page-location-post-grid {
+  position: relative;
+  top: 25px;
+}
+
+.mobile-front-page-location-post-container {
+  width: 90%;
+  margin: 0 auto;
   position: relative;
   top: 130px;
 }
 
-.front-page-location-post-grid img {
-  width: 300px;
+.front-page-hampton-court-post-container img {
+  width: 250px;
+}
+
+.front-page-hampton-court-post-container {
+  display: none;
 }
 
 svg {

@@ -12,9 +12,35 @@
     </div>
   </section>
 
-  <!-- FRONT PAGE LOCATION POST GRID - get and display all the locations in a grid -->
-  <section class="front-page-location-post-grid">
+  <section class="front-page-post-grid">
 
+    <!--MOBILE and TABLET VIEW --- FRONT PAGE LOCATIONS POST GRID - get and display all the LOCATIONS in a grid --- MOBILE and TABLET VIEW -->
+    <div class="mobile-front-page-location-post-container">
+      <div class="mobile-front-page-location-post-card-wrapper">
+        <div class="mobile-front-page-location-post-grid">
+          <?php 
+            $hamptonPost = new WP_Query(array(
+              'post_type' => 'post',
+              'post_status' => 'publish',
+              'posts_per_page' => -1,
+              'category_name' => 'locations'
+            ))
+          ?>
+          <?php
+            while($hamptonPost->have_posts()) {
+              $hamptonPost->the_post(); ?>
+                <div class="mobile-front-page-location-post-card">
+                  <p><a class="mobile-front-page-location-heading" href="<?php the_permalink(); ?>"><?php the_title(); ?></a></p>
+                  <p><a class="mobile-front-page-hampton-location-thumbnail" href="<?php the_permalink(); ?>"><?php the_post_thumbnail(); ?></a></p>
+                </div>
+            <?php }
+          ?>
+        </div>
+      </div>
+    </div>
+    <!--END OF MOBILE and TABLET VIEW --- FRONT PAGE LOCATIONS POST GRID - get and display all the LOCATIONS in a grid --- MOBILE and TABLET VIEW -->
+
+    <!--DESKTOP VIEW --- FRONT PAGE APARTMENTS POST GRID - get and display all the APARTMENTS in a grid --- DESKTOP VIEW -->
     <!-- Hampton Court Posts Grid Section -->
     <div class="front-page-hampton-court-post-container">
       <div class="front-page-hampton-court-post-card-wrapper">
@@ -23,7 +49,7 @@
             'post_type' => 'post',
             'post_status' => 'publish',
             'posts_per_page' => -1,
-            'category_name' => 'hampton-court'
+            'category_name' => 'hampton-court-apartments'
           ))
         ?>
         <?php
@@ -51,6 +77,8 @@
 
     <!-- Feltham Posts Grid Section -->
     <!-- End of Feltham Posts Grid Section -->
+    
+    <!--END OF DESKTOP VIEW --- FRONT PAGE APARTMENTS POST GRID - get and display all the APARTMENTS in a grid --- DESKTOP VIEW -->
   </section>
 
   

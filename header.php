@@ -27,7 +27,7 @@
 				<div class="header-logo-and-contact">
 					<div class="header-logo-and-hamburger">
 
-						<img class="header-logo" src="<?php echo get_template_directory_uri(); ?>/images/va-logo-white.png" alt="vantage-logo">
+						<a href="<?php echo site_url('/home/'); ?>"><img class="header-logo" src="<?php echo get_template_directory_uri(); ?>/images/va-logo-white.png" alt="vantage-logo"><a>
 
 						<!--Mobile Menu Icon -->
 						<img class="house-icon" src="<?php echo get_template_directory_uri(); ?>/images/house-icon.png" alt="house-icon">
