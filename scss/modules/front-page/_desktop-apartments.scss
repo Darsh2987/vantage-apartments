@@ -1,0 +1,34 @@
+.front-page-apartments-post-container {
+  display: none;
+}
+
+@media(min-width: 1000px) {
+
+  .front-page-apartments-post-container {
+    display: block;
+  }
+
+  .front-page-apartments-post-card-container {
+    width: 90%;
+    margin: 0 auto;
+  }
+  
+  .front-page-apartments-post-card-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .front-page-apartments-post-card-wrapper img {
+    width: 100%;
+  } 
+
+  .front-page-apartments-post-card {
+    width: 30%;
+    margin-right: 5%;
+    margin-bottom: 2rem;
+  }
+
+  .front-page-apartments-post-card:nth-child(3n) {
+    margin-right: 0rem;
+  }
+}

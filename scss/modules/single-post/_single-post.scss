@@ -21,6 +21,18 @@ svg {
   margin: 1rem 0;
 }
 
+.single-post-content h2 {
+  margin: 1rem auto;
+  font-weight: 100;
+  font-size: 1.3rem;
+}
+
+.single-post-content h3 {
+  color: $primary-green;
+  margin: 1rem auto;
+  font-size: 1.5rem;
+}
+
 .single-post-heading, .single-post-main-info, .single-post-apartment-details, .single-post-location-details, .single-post-building-details {
   width: 90%;
   margin: 2rem auto;
@@ -33,21 +45,8 @@ svg {
 
 .single-post-main-info {
   margin: 2rem auto;
-}
-
-.single-post-main-info h3 {
-  margin: 1rem 0;
-  font-weight: 100;
-}
-
-h2 {
-  color: $primary-green;
-  margin: 1rem auto;
-}
-
-.single-post-apartment-details {
   padding-bottom: 1rem;
-  border-bottom: 4px solid $faded-green;
+  border-bottom: 4px solid rgba(127,180,168, 0.3);
 }
 
 
@@ -81,6 +80,7 @@ h2 {
 
   .single-post-main-info{
     grid-area: postmaininfo;
+    border-bottom: none;
   }
 
   .single-post-image-gallery {
@@ -89,7 +89,6 @@ h2 {
 
   .single-post-apartment-details {
     grid-area: apartmentdetails;
-    border-bottom: none;
   }
 
   .single-post-location-details {

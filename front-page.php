@@ -12,6 +12,10 @@
     </div>
   </section>
 
+  <div class="mobile-front-page-opener-container">
+    <p class="mobile-front-page--opener">Providing you with the best serviced apartments in Greater London - Twickenham, Hampton Court, Kingston, Teddington and Feltham</p>
+  </div>
+
   <section class="front-page-post-grid">
 
     <!--MOBILE and TABLET VIEW --- FRONT PAGE LOCATIONS POST GRID - get and display all the LOCATIONS in a grid --- MOBILE and TABLET VIEW -->
@@ -30,8 +34,9 @@
             while($hamptonPost->have_posts()) {
               $hamptonPost->the_post(); ?>
                 <div class="mobile-front-page-location-post-card">
-                  <p><a class="mobile-front-page-location-heading" href="<?php the_permalink(); ?>"><?php the_title(); ?></a></p>
-                  <p><a class="mobile-front-page-hampton-location-thumbnail" href="<?php the_permalink(); ?>"><?php the_post_thumbnail(); ?></a></p>
+                  <a class="mobile-front-page-location-thumbnail" href="<?php the_permalink(); ?>"><?php the_post_thumbnail(); ?></a>
+                  <h2 class="mobile-front-page-location-heading"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h2>
+                  <div class="mobile-location-post-card-info"><?php echo get_the_content(); ?></div>
                 </div>
             <?php }
           ?>
@@ -41,42 +46,135 @@
     <!--END OF MOBILE and TABLET VIEW --- FRONT PAGE LOCATIONS POST GRID - get and display all the LOCATIONS in a grid --- MOBILE and TABLET VIEW -->
 
     <!--DESKTOP VIEW --- FRONT PAGE APARTMENTS POST GRID - get and display all the APARTMENTS in a grid --- DESKTOP VIEW -->
-    <!-- Hampton Court Posts Grid Section -->
-    <div class="front-page-hampton-court-post-container">
-      <div class="front-page-hampton-court-post-card-wrapper">
-        <?php 
-          $hamptonPost = new WP_Query(array(
-            'post_type' => 'post',
-            'post_status' => 'publish',
-            'posts_per_page' => -1,
-            'category_name' => 'hampton-court-apartments'
-          ))
-        ?>
-        <?php
-          while($hamptonPost->have_posts()) {
-            $hamptonPost->the_post(); ?>
-              <div class="front-page-hampton-court-post-card">
-                <h1 class="front-page-hampton-court-heading">Hampton Court</h1>
-                <p><a class="front-page-post-card-heading" href="<?php the_permalink(); ?>"><?php the_title(); ?></a></p>
-                <p><a class="front-page-hampton-court-thumbnail" href="<?php the_permalink(); ?>"><?php the_post_thumbnail(); ?></a></p>
-              </div>
-          <?php }
-        ?>
+
+
+    <div class="front-page-apartments-post-container">
+
+      <!-- Twickenham Posts Grid Section -->
+      <div class="front-page-apartments-post-card-container twickenham">
+        <h1 class="front-page-apartments-heading">Twickenham</h1>
+        <div class="front-page-apartments-post-card-wrapper">
+          <?php 
+            $twickenhamPost = new WP_Query(array(
+              'post_type' => 'post',
+              'post_status' => 'publish',
+              'posts_per_page' => -1,
+              'category_name' => 'twickenham-apartments'
+            ))
+          ?>
+          <?php
+            while($twickenhamPost->have_posts()) {
+              $twickenhamPost->the_post(); ?>
+                <div class="front-page-apartments-post-card">
+                  <p><a class="front-page-post-card-heading" href="<?php the_permalink(); ?>"><?php the_title(); ?></a></p>
+                  <p><a class="front-page-apartments-thumbnail" href="<?php the_permalink(); ?>"><?php the_post_thumbnail(); ?></a></p>
+                </div>
+            <?php }
+          ?>
+        </div>
       </div>
+      <!-- End of Twickenham Posts Grid Section -->
+
+      <!-- Hampton Court Posts Grid Section -->
+      <div class="front-page-apartments-post-card-container hampton-court">
+        <h1 class="front-page-apartments-heading">Hampton Court</h1>
+        <div class="front-page-apartments-post-card-wrapper">
+          <?php 
+            $hamptonPost = new WP_Query(array(
+              'post_type' => 'post',
+              'post_status' => 'publish',
+              'posts_per_page' => -1,
+              'category_name' => 'hampton-court-apartments'
+            ))
+          ?>
+          <?php
+            while($hamptonPost->have_posts()) {
+              $hamptonPost->the_post(); ?>
+                <div class="front-page-apartments-post-card">
+                  <p><a class="front-page-post-card-heading" href="<?php the_permalink(); ?>"><?php the_title(); ?></a></p>
+                  <p><a class="front-page-apartments-thumbnail" href="<?php the_permalink(); ?>"><?php the_post_thumbnail(); ?></a></p>
+                </div>
+            <?php }
+          ?>
+        </div>
+      </div>
+      <!-- End of Hampton Court Posts Grid Section -->
+
+      <!-- Kingston Posts Grid Section -->
+      <div class="front-page-apartments-post-card-container kingston">
+        <h1 class="front-page-apartments-heading">Kingston</h1>
+        <div class="front-page-apartments-post-card-wrapper">
+          <?php 
+            $kingstonPost = new WP_Query(array(
+              'post_type' => 'post',
+              'post_status' => 'publish',
+              'posts_per_page' => -1,
+              'category_name' => 'kingston-apartments'
+            ))
+          ?>
+          <?php
+            while($kingstonPost->have_posts()) {
+              $kingstonPost->the_post(); ?>
+                <div class="front-page-apartments-post-card">
+                  <p><a class="front-page-post-card-heading" href="<?php the_permalink(); ?>"><?php the_title(); ?></a></p>
+                  <p><a class="front-page-apartments-thumbnail" href="<?php the_permalink(); ?>"><?php the_post_thumbnail(); ?></a></p>
+                </div>
+            <?php }
+          ?>
+        </div>
+      </div>
+      <!-- End of Kingston Posts Grid Section -->
+
+      <!-- Teddington Posts Grid Section -->
+      <div class="front-page-apartments-post-card-container teddington">
+        <h1 class="front-page-apartments-heading">Teddington</h1>
+        <div class="front-page-apartments-post-card-wrapper">
+          <?php 
+            $teddingtonPost = new WP_Query(array(
+              'post_type' => 'post',
+              'post_status' => 'publish',
+              'posts_per_page' => -1,
+              'category_name' => 'teddington-apartments'
+            ))
+          ?>
+          <?php
+            while($teddingtonPost->have_posts()) {
+              $teddingtonPost->the_post(); ?>
+                <div class="front-page-apartments-post-card">
+                  <p><a class="front-page-post-card-heading" href="<?php the_permalink(); ?>"><?php the_title(); ?></a></p>
+                  <p><a class="front-page-apartments-thumbnail" href="<?php the_permalink(); ?>"><?php the_post_thumbnail(); ?></a></p>
+                </div>
+            <?php }
+          ?>
+        </div>
+      </div>
+      <!-- End of Teddington Posts Grid Section -->
+
+      <!-- Feltham Posts Grid Section -->
+      <div class="front-page-apartments-post-card-container feltham">
+        <h1 class="front-page-apartments-heading">Feltham</h1>
+        <div class="front-page-apartments-post-card-wrapper">
+          <?php 
+            $felthamPost = new WP_Query(array(
+              'post_type' => 'post',
+              'post_status' => 'publish',
+              'posts_per_page' => -1,
+              'category_name' => 'feltham-apartments'
+            ))
+          ?>
+          <?php
+            while($felthamPost->have_posts()) {
+              $felthamPost->the_post(); ?>
+                <div class="front-page-apartments-post-card">
+                  <p><a class="front-page-post-card-heading" href="<?php the_permalink(); ?>"><?php the_title(); ?></a></p>
+                  <p><a class="front-page-apartments-thumbnail" href="<?php the_permalink(); ?>"><?php the_post_thumbnail(); ?></a></p>
+                </div>
+            <?php }
+          ?>
+        </div>
+      </div>
+      <!-- End of Feltham Posts Grid Section -->
     </div>
-    <!-- End of Hampton Court Posts Grid Section -->
-
-    <!-- Twickenham Posts Grid Section -->
-    <!-- End of Twickenham Posts Grid Section -->
-
-    <!-- Kingston Posts Grid Section -->
-    <!-- End of Kingston Posts Grid Section -->
-
-    <!-- Teddington Posts Grid Section -->
-    <!-- End of Teddington Posts Grid Section -->
-
-    <!-- Feltham Posts Grid Section -->
-    <!-- End of Feltham Posts Grid Section -->
     
     <!--END OF DESKTOP VIEW --- FRONT PAGE APARTMENTS POST GRID - get and display all the APARTMENTS in a grid --- DESKTOP VIEW -->
   </section>

@@ -159,6 +159,22 @@ header {
     display: none;
   }
 }
+.mobile-front-page-opener-container {
+  position: relative;
+  top: 80px;
+  width: 80%;
+  margin: 0 auto;
+  padding: 1.5rem;
+  text-align: center;
+  text-transform: uppercase;
+  line-height: 2.5rem;
+  font-size: 1.2rem;
+  background: #fff;
+  color: #006a52;
+  box-shadow: 2px 0px 16px -4px black;
+  border-radius: 1%;
+}
+
 @keyframes slider {
   0% {
     left: 0%;
@@ -243,24 +259,107 @@ header {
     height: 400px;
   }
 }
-.mobile-front-page-location-post-grid {
-  position: relative;
-  top: 25px;
+.front-page-apartments-post-container {
+  display: none;
 }
 
-.mobile-front-page-location-post-container {
-  width: 90%;
+@media (min-width: 1000px) {
+  .front-page-apartments-post-container {
+    display: block;
+  }
+
+  .front-page-apartments-post-card-container {
+    width: 90%;
+    margin: 0 auto;
+  }
+
+  .front-page-apartments-post-card-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .front-page-apartments-post-card-wrapper img {
+    width: 100%;
+  }
+
+  .front-page-apartments-post-card {
+    width: 30%;
+    margin-right: 5%;
+    margin-bottom: 2rem;
+  }
+
+  .front-page-apartments-post-card:nth-child(3n) {
+    margin-right: 0rem;
+  }
+}
+.mobile-front-page-location-post-container img {
+  width: 100%;
+}
+
+.mobile-front-page-location-post-card {
+  margin-bottom: 1.5rem;
+}
+
+.mobile-front-page-location-heading {
+  padding: 1rem 0;
+  font-weight: 100;
+}
+
+.mobile-front-page-location-heading a {
+  color: #006a52;
+}
+
+.mobile-front-page-location-heading, .mobile-location-post-card-info {
+  width: 80%;
   margin: 0 auto;
+}
+
+.mobile-location-post-card-info h3 {
+  margin-bottom: 1rem;
+}
+
+.mobile-location-post-card-info ul li .fas {
+  color: #43B59C;
+  font-size: 0.9rem;
+  padding-right: 0.5rem;
+}
+
+.mobile-location-post-card-info ul li span:after {
+  width: 100%;
+}
+
+.mobile-location-post-card-info ul li {
+  font-size: 0.9rem;
+  margin-bottom: 1rem;
+}
+
+@media (min-width: 768px) {
+  .mobile-front-page-location-post-grid {
+    width: 90%;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+
+  .mobile-front-page-location-post-card {
+    width: 45%;
+  }
+
+  .mobile-front-page-location-heading, .mobile-location-post-card-info {
+    width: 100%;
+    margin: 0;
+  }
+}
+@media (min-width: 1000px) {
+  .mobile-front-page-location-post-container {
+    display: none;
+  }
+}
+.front-page-post-grid {
   position: relative;
   top: 130px;
-}
-
-.front-page-hampton-court-post-container img {
-  width: 250px;
-}
-
-.front-page-hampton-court-post-container {
-  display: none;
+  margin: 2rem 0;
 }
 
 svg {
@@ -286,6 +385,18 @@ svg {
   margin: 1rem 0;
 }
 
+.single-post-content h2 {
+  margin: 1rem auto;
+  font-weight: 100;
+  font-size: 1.3rem;
+}
+
+.single-post-content h3 {
+  color: #006a52;
+  margin: 1rem auto;
+  font-size: 1.5rem;
+}
+
 .single-post-heading, .single-post-main-info, .single-post-apartment-details, .single-post-location-details, .single-post-building-details {
   width: 90%;
   margin: 2rem auto;
@@ -297,21 +408,8 @@ svg {
 
 .single-post-main-info {
   margin: 2rem auto;
-}
-
-.single-post-main-info h3 {
-  margin: 1rem 0;
-  font-weight: 100;
-}
-
-h2 {
-  color: #006a52;
-  margin: 1rem auto;
-}
-
-.single-post-apartment-details {
   padding-bottom: 1rem;
-  border-bottom: 4px solid rgba(0, 106, 82, 0.3);
+  border-bottom: 4px solid rgba(127, 180, 168, 0.3);
 }
 
 .single-post-map {
@@ -343,6 +441,7 @@ h2 {
 
   .single-post-main-info {
     grid-area: postmaininfo;
+    border-bottom: none;
   }
 
   .single-post-image-gallery {
@@ -351,7 +450,6 @@ h2 {
 
   .single-post-apartment-details {
     grid-area: apartmentdetails;
-    border-bottom: none;
   }
 
   .single-post-location-details {
