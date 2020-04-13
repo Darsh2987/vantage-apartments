@@ -8,14 +8,30 @@
     display: block;
   }
 
+  .front-page-apartments-post-card-container:nth-child(even) {
+    background-color: $faded-green;
+    margin-bottom: 2rem;
+  }
+
   .front-page-apartments-post-card-container {
+    padding-top: 2rem;
+  }
+
+  .front-page-apartments-post-card-container h1 {
+    color: $primary-green;
+    margin-bottom: 1rem;
     width: 90%;
-    margin: 0 auto;
+    margin: 0rem auto 2rem auto;
+    text-align: center;
+    border-bottom: 3px solid $border-bottom;
+    padding-bottom: 0.5rem;
   }
   
   .front-page-apartments-post-card-wrapper {
     display: flex;
     flex-wrap: wrap;
+    width: 90%;
+    margin: 0 auto;
   }
 
   .front-page-apartments-post-card-wrapper img {
@@ -30,5 +46,18 @@
 
   .front-page-apartments-post-card:nth-child(3n) {
     margin-right: 0rem;
+  }
+
+  .front-page-apartments-thumbnail {
+    margin: 1rem 0;
+  }
+
+  .front-page-post-card-heading, .front-page-post-card-excerpt {
+    text-align: center;
+    font-size: 1.2rem;
+  }
+
+  .front-page-post-card-excerpt {
+    font-size: 1rem;
   }
 }

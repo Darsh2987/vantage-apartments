@@ -1,5 +1,11 @@
 .front-page-post-grid {
   position: relative;
-  top: 130px;
+  top: 60px;
   margin: 2rem 0;
+}
+
+@media(min-width: 1000px) {
+  .front-page-post-grid {
+    top: 80px;
+  }
 }

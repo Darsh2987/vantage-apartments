@@ -35,7 +35,7 @@
     display: block;
     text-align: right;
     position: relative;
-    bottom: 25px;
+    bottom: 27px;
   }
 
   header nav li  {
@@ -50,5 +50,11 @@
 
   .nav .nav-phone, .nav .nav-email {
     display: none;
+  }
+}
+
+@media (min-width: 1000px) {
+  header .nav {
+    bottom: 36px;
   }
 }

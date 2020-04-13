@@ -76,13 +76,8 @@ header {
     margin-top: 1.5rem;
   }
 
-  .header-contact-and-nav {
-    margin-top: -0.5rem;
-  }
-
   .header-phone-number, .header-email {
     display: flex;
-    align-items: center;
   }
 
   .header-phone-number p, .header-email a {
@@ -98,6 +93,8 @@ header {
 
   .header-email img {
     width: 32px;
+    position: relative;
+    bottom: -2px;
   }
 }
 @media (min-width: 1000px) {
@@ -106,6 +103,11 @@ header {
     width: 400px;
     margin-left: 0.5rem;
     justify-content: space-between;
+  }
+
+  .header-email {
+    position: relative;
+    bottom: 9px;
   }
 }
 @media (max-width: 767px) {
@@ -142,7 +144,7 @@ header {
     display: block;
     text-align: right;
     position: relative;
-    bottom: 25px;
+    bottom: 27px;
   }
 
   header nav li {
@@ -159,22 +161,37 @@ header {
     display: none;
   }
 }
+@media (min-width: 1000px) {
+  header .nav {
+    bottom: 36px;
+  }
+}
 .mobile-front-page-opener-container {
   position: relative;
-  top: 80px;
+  top: 50px;
   width: 80%;
   margin: 0 auto;
-  padding: 1.5rem;
+  padding: 1rem;
   text-align: center;
   text-transform: uppercase;
   line-height: 2.5rem;
-  font-size: 1.2rem;
-  background: #fff;
-  color: #006a52;
+  font-size: 1rem;
+  background: rgba(250, 250, 250, 0.8);
+  color: black;
   box-shadow: 2px 0px 16px -4px black;
   border-radius: 1%;
 }
 
+@media (min-width: 768px) {
+  .mobile-front-page-opener-container {
+    top: 75px;
+  }
+}
+@media (min-width: 1000px) {
+  .mobile-front-page-opener-container {
+    font-size: 1.3rem;
+  }
+}
 @keyframes slider {
   0% {
     left: 0%;
@@ -268,14 +285,30 @@ header {
     display: block;
   }
 
+  .front-page-apartments-post-card-container:nth-child(even) {
+    background-color: rgba(127, 180, 168, 0.1);
+    margin-bottom: 2rem;
+  }
+
   .front-page-apartments-post-card-container {
+    padding-top: 2rem;
+  }
+
+  .front-page-apartments-post-card-container h1 {
+    color: #006a52;
+    margin-bottom: 1rem;
     width: 90%;
-    margin: 0 auto;
+    margin: 0rem auto 2rem auto;
+    text-align: center;
+    border-bottom: 3px solid rgba(127, 180, 168, 0.3);
+    padding-bottom: 0.5rem;
   }
 
   .front-page-apartments-post-card-wrapper {
     display: flex;
     flex-wrap: wrap;
+    width: 90%;
+    margin: 0 auto;
   }
 
   .front-page-apartments-post-card-wrapper img {
@@ -290,6 +323,19 @@ header {
 
   .front-page-apartments-post-card:nth-child(3n) {
     margin-right: 0rem;
+  }
+
+  .front-page-apartments-thumbnail {
+    margin: 1rem 0;
+  }
+
+  .front-page-post-card-heading, .front-page-post-card-excerpt {
+    text-align: center;
+    font-size: 1.2rem;
+  }
+
+  .front-page-post-card-excerpt {
+    font-size: 1rem;
   }
 }
 .mobile-front-page-location-post-container img {
@@ -358,10 +404,93 @@ header {
 }
 .front-page-post-grid {
   position: relative;
-  top: 130px;
+  top: 60px;
   margin: 2rem 0;
 }
 
+@media (min-width: 1000px) {
+  .front-page-post-grid {
+    top: 80px;
+  }
+}
+.location-page-container {
+  position: relative;
+  top: 157px;
+  margin-bottom: 1rem;
+}
+
+.location-page-content {
+  width: 90%;
+  margin: 1rem auto;
+  padding-bottom: 1rem;
+  border-bottom: 4px solid rgba(127, 180, 168, 0.3);
+}
+
+.location-page-heading {
+  color: #006a52;
+  margin-bottom: 1rem;
+}
+
+.location-page-main-info h3 {
+  margin-bottom: 1rem;
+  font-size: 1.3rem;
+}
+
+.location-page-post-card {
+  margin-bottom: 3rem;
+}
+
+.location-page-post-card-heading {
+  width: 85%;
+  margin: 1rem auto;
+  color: #006a52;
+  font-size: 1.3rem;
+  font-weight: bold;
+  text-align: center;
+}
+
+.location-page-post-card-excerpt p {
+  text-align: center;
+  margin-bottom: 1rem;
+  width: 85%;
+  margin: 1rem auto;
+}
+
+.location-page-post-card-heading a {
+  color: #006a52;
+}
+
+@media (min-width: 768px) {
+  .location-page-post-card-container {
+    display: flex;
+    flex-wrap: wrap;
+    width: 90%;
+    margin: 0 auto;
+    justify-content: space-between;
+  }
+
+  .location-page-post-card {
+    width: 45%;
+  }
+
+  .location-page-post-card img {
+    width: 100%;
+  }
+}
+@media (min-width: 1200px) {
+  .location-page-post-card-container {
+    justify-content: start;
+  }
+
+  .location-page-post-card {
+    width: 30%;
+    margin-right: 5%;
+  }
+
+  .location-page-post-card:nth-child(3n) {
+    margin-right: 0rem;
+  }
+}
 svg {
   position: absolute;
   top: 132px;

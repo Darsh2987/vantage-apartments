@@ -13,11 +13,11 @@
   </section>
 
   <div class="mobile-front-page-opener-container">
-    <p class="mobile-front-page--opener">Providing you with the best serviced apartments in Greater London - Twickenham, Hampton Court, Kingston, Teddington and Feltham</p>
+    <p class="mobile-front-page--opener">Providing you with the best serviced apartments in Greater London - <strong>Twickenham, Hampton Court, Kingston, Teddington and Feltham</strong></p>
   </div>
 
   <section class="front-page-post-grid">
-
+    
     <!--MOBILE and TABLET VIEW --- FRONT PAGE LOCATIONS POST GRID - get and display all the LOCATIONS in a grid --- MOBILE and TABLET VIEW -->
     <div class="mobile-front-page-location-post-container">
       <div class="mobile-front-page-location-post-card-wrapper">
@@ -46,8 +46,6 @@
     <!--END OF MOBILE and TABLET VIEW --- FRONT PAGE LOCATIONS POST GRID - get and display all the LOCATIONS in a grid --- MOBILE and TABLET VIEW -->
 
     <!--DESKTOP VIEW --- FRONT PAGE APARTMENTS POST GRID - get and display all the APARTMENTS in a grid --- DESKTOP VIEW -->
-
-
     <div class="front-page-apartments-post-container">
 
       <!-- Twickenham Posts Grid Section -->
@@ -66,8 +64,9 @@
             while($twickenhamPost->have_posts()) {
               $twickenhamPost->the_post(); ?>
                 <div class="front-page-apartments-post-card">
-                  <p><a class="front-page-post-card-heading" href="<?php the_permalink(); ?>"><?php the_title(); ?></a></p>
-                  <p><a class="front-page-apartments-thumbnail" href="<?php the_permalink(); ?>"><?php the_post_thumbnail(); ?></a></p>
+                  <p class="front-page-post-card-heading"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></p>
+                  <p class="front-page-apartments-thumbnail"><a href="<?php the_permalink(); ?>"><?php the_post_thumbnail(); ?></a></p>
+                  <div class="front-page-post-card-excerpt"><?php the_excerpt(); ?></div>
                 </div>
             <?php }
           ?>
@@ -91,8 +90,9 @@
             while($hamptonPost->have_posts()) {
               $hamptonPost->the_post(); ?>
                 <div class="front-page-apartments-post-card">
-                  <p><a class="front-page-post-card-heading" href="<?php the_permalink(); ?>"><?php the_title(); ?></a></p>
-                  <p><a class="front-page-apartments-thumbnail" href="<?php the_permalink(); ?>"><?php the_post_thumbnail(); ?></a></p>
+                  <p class="front-page-post-card-heading"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></p>
+                  <p class="front-page-apartments-thumbnail"><a href="<?php the_permalink(); ?>"><?php the_post_thumbnail(); ?></a></p>
+                  <div class="front-page-post-card-excerpt"><?php the_excerpt(); ?></div>
                 </div>
             <?php }
           ?>
@@ -116,8 +116,9 @@
             while($kingstonPost->have_posts()) {
               $kingstonPost->the_post(); ?>
                 <div class="front-page-apartments-post-card">
-                  <p><a class="front-page-post-card-heading" href="<?php the_permalink(); ?>"><?php the_title(); ?></a></p>
-                  <p><a class="front-page-apartments-thumbnail" href="<?php the_permalink(); ?>"><?php the_post_thumbnail(); ?></a></p>
+                  <p class="front-page-post-card-heading"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></p>
+                  <p class="front-page-apartments-thumbnail"><a href="<?php the_permalink(); ?>"><?php the_post_thumbnail(); ?></a></p>
+                  <div class="front-page-post-card-excerpt"><?php the_excerpt(); ?></div>
                 </div>
             <?php }
           ?>
@@ -141,8 +142,9 @@
             while($teddingtonPost->have_posts()) {
               $teddingtonPost->the_post(); ?>
                 <div class="front-page-apartments-post-card">
-                  <p><a class="front-page-post-card-heading" href="<?php the_permalink(); ?>"><?php the_title(); ?></a></p>
-                  <p><a class="front-page-apartments-thumbnail" href="<?php the_permalink(); ?>"><?php the_post_thumbnail(); ?></a></p>
+                  <p class="front-page-post-card-heading"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></p>
+                  <p class="front-page-apartments-thumbnail"><a href="<?php the_permalink(); ?>"><?php the_post_thumbnail(); ?></a></p>
+                  <div class="front-page-post-card-excerpt"><?php the_excerpt(); ?></div>
                 </div>
             <?php }
           ?>
@@ -166,8 +168,9 @@
             while($felthamPost->have_posts()) {
               $felthamPost->the_post(); ?>
                 <div class="front-page-apartments-post-card">
-                  <p><a class="front-page-post-card-heading" href="<?php the_permalink(); ?>"><?php the_title(); ?></a></p>
-                  <p><a class="front-page-apartments-thumbnail" href="<?php the_permalink(); ?>"><?php the_post_thumbnail(); ?></a></p>
+                  <p class="front-page-post-card-heading"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></p>
+                  <p class="front-page-apartments-thumbnail"><a href="<?php the_permalink(); ?>"><?php the_post_thumbnail(); ?></a></p>
+                  <div class="front-page-post-card-excerpt"><?php the_excerpt(); ?></div>
                 </div>
             <?php }
           ?>
@@ -175,7 +178,6 @@
       </div>
       <!-- End of Feltham Posts Grid Section -->
     </div>
-    
     <!--END OF DESKTOP VIEW --- FRONT PAGE APARTMENTS POST GRID - get and display all the APARTMENTS in a grid --- DESKTOP VIEW -->
   </section>
 

@@ -1,15 +1,27 @@
 .mobile-front-page-opener-container {
   position: relative;
-  top: 80px;
+  top: 50px;
   width: 80%;
   margin: 0 auto;
-  padding: 1.5rem;
+  padding: 1rem;
   text-align: center;
   text-transform: uppercase;
   line-height: 2.5rem;
-  font-size: 1.2rem;
-  background: #fff;
-  color: $primary-green;
+  font-size: 1rem;
+  background: rgba(250, 250, 250, 0.8);
+  color: black;
   box-shadow: 2px 0px 16px -4px black;
   border-radius: 1%;
+}
+
+@media(min-width: 768px) {
+  .mobile-front-page-opener-container {
+    top: 75px;
+  }
+}
+
+@media(min-width: 1000px) {
+  .mobile-front-page-opener-container {
+    font-size: 1.3rem;
+  }
 }
