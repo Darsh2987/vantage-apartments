@@ -12,8 +12,21 @@
     </div>
   </section>
 
-  <div class="mobile-front-page-opener-container">
-    <p class="mobile-front-page--opener">Providing you with the best serviced apartments in Greater London - <strong>Twickenham, Hampton Court, Kingston, Teddington and Feltham</strong></p>
+  <div id="front-page-opener" class="front-page-opener-container">
+    <?php 
+      $openerPost = new WP_Query(array(
+        'post_type' => 'post',
+        'post_status' => 'publish',
+        'post_per_page' => 1,
+        'category_name' => 'front-page-opener'
+      ))
+    ?>
+    <?php 
+      while($openerPost->have_posts()) {
+        $openerPost->the_post(); ?>
+        <p class="front-page-opener"><?php echo get_the_content(); ?></p>
+      <?php }
+    ?>
   </div>
 
   <section class="front-page-post-grid">
@@ -50,7 +63,10 @@
 
       <!-- Twickenham Posts Grid Section -->
       <div class="front-page-apartments-post-card-container twickenham">
-        <h1 class="front-page-apartments-heading">Twickenham</h1>
+        <div class="front-page-apartments-post-card-heading-links">
+          <p class="front-page-apartments-heading">Twickenham Apartments</p>
+          <?php wp_nav_menu( array( 'menu' => 'twickenham' ) ); ?>
+        </div>
         <div class="front-page-apartments-post-card-wrapper">
           <?php 
             $twickenhamPost = new WP_Query(array(
@@ -76,7 +92,10 @@
 
       <!-- Hampton Court Posts Grid Section -->
       <div class="front-page-apartments-post-card-container hampton-court">
-        <h1 class="front-page-apartments-heading">Hampton Court</h1>
+        <div class="front-page-apartments-post-card-heading-links">
+          <p class="front-page-apartments-heading">Hampton Court Apartments</p>
+          <?php wp_nav_menu( array( 'menu' => 'hampton-court' ) ); ?>
+        </div>
         <div class="front-page-apartments-post-card-wrapper">
           <?php 
             $hamptonPost = new WP_Query(array(
@@ -102,7 +121,10 @@
 
       <!-- Kingston Posts Grid Section -->
       <div class="front-page-apartments-post-card-container kingston">
-        <h1 class="front-page-apartments-heading">Kingston</h1>
+        <div class="front-page-apartments-post-card-heading-links">
+          <p class="front-page-apartments-heading">Kingston Apartments</p>
+          <?php wp_nav_menu( array( 'menu' => 'kingston' ) ); ?>
+        </div>
         <div class="front-page-apartments-post-card-wrapper">
           <?php 
             $kingstonPost = new WP_Query(array(
@@ -128,7 +150,10 @@
 
       <!-- Teddington Posts Grid Section -->
       <div class="front-page-apartments-post-card-container teddington">
-        <h1 class="front-page-apartments-heading">Teddington</h1>
+        <div class="front-page-apartments-post-card-heading-links">
+          <p class="front-page-apartments-heading">Teddington Apartments</p>
+          <?php wp_nav_menu( array( 'menu' => 'teddington' ) ); ?>
+        </div>
         <div class="front-page-apartments-post-card-wrapper">
           <?php 
             $teddingtonPost = new WP_Query(array(
@@ -154,7 +179,10 @@
 
       <!-- Feltham Posts Grid Section -->
       <div class="front-page-apartments-post-card-container feltham">
-        <h1 class="front-page-apartments-heading">Feltham</h1>
+        <div class="front-page-apartments-post-card-heading-links">
+          <p class="front-page-apartments-heading">Feltham Apartments</p>
+          <?php wp_nav_menu( array( 'menu' => 'feltham' ) ); ?>
+        </div>
         <div class="front-page-apartments-post-card-wrapper">
           <?php 
             $felthamPost = new WP_Query(array(

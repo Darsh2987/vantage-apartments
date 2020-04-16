@@ -1,3 +1,8 @@
+/*
+  Theme Name: Vantage Apartments
+  Author Darshan Patel
+  Version 1.0
+*/
 * {
   margin: 0;
   padding: 0;
@@ -12,16 +17,15 @@ body {
 
 header {
   width: 100%;
-  background: #006a52;
+  background: #fff;
   position: fixed;
   top: 0;
   z-index: 2;
   padding-bottom: 1rem;
 }
 
-.header-logo {
-  width: 250px;
-  margin: 1rem 0;
+.header-logo img {
+  width: 230px;
 }
 
 .header-logo-and-contact {
@@ -29,66 +33,70 @@ header {
   margin: 0 auto;
 }
 
-.header-logo-and-hamburger {
-  display: grid;
-  grid-template-columns: 80% 10%;
+.header-logo-and-mobile-nav-icon {
+  display: flex;
   justify-content: space-between;
+  margin: 1rem 0rem;
+  cursor: pointer;
 }
 
-.header-phone-number, .header-email {
-  display: flex;
-  align-items: center;
+.header-content .mobile-nav-icon .far {
+  font-size: 2rem;
+  color: #006a52;
 }
 
 .header-phone-number {
   margin-left: 0.3rem;
 }
 
-.header-phone-number img {
-  width: 19px;
+.header-phone-number .fas {
+  font-weight: 900;
   margin-right: 0.2rem;
+  position: relative;
+  bottom: 2px;
+}
+
+.header-email {
+  cursor: pointer;
+  margin-left: 0.3rem;
+  z-index: 2;
+}
+
+.header-email a:hover {
+  color: #00B78D;
+}
+
+.header-email .far {
+  margin-right: 0.3rem;
 }
 
 .header-phone-number p, .header-email a {
-  color: #fff;
+  color: #006a52;
   font-size: 1.1rem;
 }
 
-.header-email img {
-  width: 32px;
-}
-
-@media (min-width: 768px) {
-  header {
-    padding-bottom: 0;
-  }
-
-  .header-logo-and-contact {
-    width: 90%;
-  }
-
-  .header-content {
-    width: 90%;
-  }
-
+@media (min-width: 700px) {
   .header-logo {
     width: 250px;
-    margin-top: 1.5rem;
-  }
-
-  .header-phone-number, .header-email {
-    display: flex;
   }
 
   .header-phone-number p, .header-email a {
-    color: #fff;
+    color: #006a52;
     font-size: 1rem;
     z-index: 2;
+  }
+
+  .header-phone-number {
+    margin-bottom: 0.3rem;
   }
 
   .header-phone-number img {
     width: 19px;
     margin-right: 0.2rem;
+  }
+
+  .header-email {
+    margin-left: 0.3rem;
   }
 
   .header-email img {
@@ -98,26 +106,26 @@ header {
   }
 }
 @media (min-width: 1000px) {
+  .header-logo img {
+    width: 275px;
+  }
+
   .header-contact-info {
     display: flex;
-    width: 400px;
-    margin-left: 0.5rem;
-    justify-content: space-between;
   }
 
   .header-email {
-    position: relative;
-    bottom: 9px;
+    margin-left: 1rem;
   }
 }
-@media (max-width: 767px) {
-  header .nav {
+@media (max-width: 749px) {
+  .header-main-nav {
     position: fixed;
     top: 0px;
     right: 0px;
     left: 1100px;
     bottom: 0px;
-    background-color: rgba(0, 0, 0, 0.9);
+    background-color: rgba(250, 250, 250, 0.95);
     opacity: 0;
     width: 100%;
     transition: all ease-in-out 0.6s;
@@ -125,6 +133,8 @@ header {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    text-align: center;
+    font-size: 1.5rem;
   }
 
   .nav--show {
@@ -133,14 +143,66 @@ header {
     transition: all ease-in-out 0.4s;
     z-index: 2;
   }
+
+  .mobile-nav-icon {
+    z-index: 3;
+    position: relative;
+  }
+
+  .header-main-nav .main-nav, .header-main-nav .menu-location-nav-container {
+    font-size: 1.1rem;
+  }
+
+  .header-main-nav .main-nav, .header-main-nav .menu-location-nav-container {
+    width: 100%;
+  }
+
+  .header-main-nav .main-nav {
+    margin-bottom: 2rem;
+  }
+
+  .main-nav .nav-phone, .main-nav .nav-email a {
+    color: black;
+  }
+
+  .main-nav .nav-phone .fas, .main-nav .nav-email .far {
+    margin-right: 0.3rem;
+  }
+
+  .header-main-nav .menu-main-nav-container {
+    margin-top: 2rem;
+  }
+
+  .header-main-nav .menu-main-nav-container a, .header-main-nav .menu-location-nav-container a {
+    color: #006a52;
+  }
+
+  .header-main-nav li {
+    margin-bottom: 1rem;
+    font-weight: bold;
+  }
+
+  #menu-location-nav li .sub-menu {
+    margin: 1rem;
+  }
+
+  #menu-location-nav li .sub-menu li a {
+    font-size: 1rem;
+    color: #00B78D;
+  }
+
+  .menu-privacy-policy-container a {
+    color: blue;
+    font-size: 0.8rem;
+  }
 }
 .house-icon {
   width: 25px;
   margin-top: 1.2rem;
 }
 
-@media (min-width: 768px) {
-  header .nav {
+@media (min-width: 750px) {
+  header .header-main-nav {
     display: block;
     text-align: right;
     position: relative;
@@ -148,16 +210,70 @@ header {
   }
 
   header nav li {
-    display: inline;
+    display: inline-block;
     margin-left: 1rem;
+  }
+
+  .header-main-nav a {
+    color: #006a52;
+  }
+
+  .header-main-nav a:hover {
+    color: #00B78D;
+  }
+
+  .header-main-nav .main-nav {
+    position: relative;
+    bottom: 83px;
+  }
+
+  .menu-location-nav-container {
+    position: relative;
+    top: 31px;
+  }
+
+  #menu-location-nav li ul {
+    display: none;
+    position: absolute;
+    top: 18px;
+    background-color: rgba(250, 250, 250, 0.95);
+  }
+
+  #menu-location-nav li ul li {
+    padding: 1rem;
+    margin-left: 0;
+  }
+
+  #menu-location-nav li ul li {
+    display: block;
+    text-align: left;
+  }
+
+  #menu-location-nav li ul li a {
+    color: #006a52;
+  }
+
+  #menu-location-nav li:hover ul {
+    display: block;
+  }
+
+  #menu-location-nav li ul li:hover {
+    background-color: #006a52;
+  }
+
+  #menu-location-nav li ul li a:hover, #menu-location-nav li ul li:hover a {
     color: #fff;
   }
 
-  .house-icon {
+  .mobile-nav-icon {
     display: none;
   }
 
-  .nav .nav-phone, .nav .nav-email {
+  .header-main-nav .nav-phone, .header-main-nav .nav-email {
+    display: none;
+  }
+
+  .header-main-nav .menu-privacy-policy-container {
     display: none;
   }
 }
@@ -165,8 +281,21 @@ header {
   header .nav {
     bottom: 36px;
   }
+
+  header .header-main-nav {
+    bottom: 16px;
+  }
+
+  .menu-location-nav-container {
+    position: relative;
+    top: 15px;
+  }
 }
-.mobile-front-page-opener-container {
+.remove {
+  display: none;
+}
+
+.front-page-opener-container {
   position: relative;
   top: 50px;
   width: 80%;
@@ -183,12 +312,12 @@ header {
 }
 
 @media (min-width: 768px) {
-  .mobile-front-page-opener-container {
+  .front-page-opener-container {
     top: 75px;
   }
 }
 @media (min-width: 1000px) {
-  .mobile-front-page-opener-container {
+  .front-page-opener-container {
     font-size: 1.3rem;
   }
 }
@@ -230,7 +359,7 @@ header {
 .image-slider-container {
   overflow: hidden;
   position: relative;
-  top: 133px;
+  top: 167px;
   height: 300px;
 }
 
@@ -294,14 +423,45 @@ header {
     padding-top: 2rem;
   }
 
-  .front-page-apartments-post-card-container h1 {
-    color: #006a52;
-    margin-bottom: 1rem;
+  .front-page-apartments-post-card-heading-links {
+    display: flex;
     width: 90%;
-    margin: 0rem auto 2rem auto;
-    text-align: center;
+    margin: 0 auto;
     border-bottom: 3px solid rgba(127, 180, 168, 0.3);
-    padding-bottom: 0.5rem;
+    padding-bottom: 0.3rem;
+    justify-content: space-between;
+    margin-bottom: 2rem;
+  }
+
+  .front-page-apartments-heading {
+    color: #006a52;
+    font-size: 1.7rem;
+    font-weight: bold;
+    position: relative;
+    top: -5px;
+  }
+
+  .front-page-apartments-post-card-heading-links div {
+    display: flex;
+    font-size: 1.1rem;
+  }
+
+  .front-page-apartments-post-card-heading-links .menu {
+    display: flex;
+  }
+
+  .front-page-apartments-post-card-heading-links .menu .menu-item a {
+    padding: 0.5rem;
+    margin-right: 0.5rem;
+    width: 100px;
+    text-align: center;
+    cursor: pointer;
+    color: #000;
+  }
+
+  .front-page-apartments-post-card-heading-links .menu .menu-item a:hover {
+    background-color: #006a52;
+    color: #fff;
   }
 
   .front-page-apartments-post-card-wrapper {
@@ -329,13 +489,48 @@ header {
     margin: 1rem 0;
   }
 
-  .front-page-post-card-heading, .front-page-post-card-excerpt {
-    text-align: center;
+  .front-page-post-card-heading {
+    text-align: left;
     font-size: 1.2rem;
   }
 
   .front-page-post-card-excerpt {
+    text-align: left;
+    font-size: 0.8rem;
+  }
+
+  .front-page-post-card-excerpt li {
+    margin-bottom: 0.5rem;
+  }
+
+  .front-page-post-card-excerpt ul li .fas {
+    color: #43B59C;
+    padding-right: 0.5rem;
+  }
+}
+@media (min-width: 1100px) {
+  .front-page-post-card-excerpt {
+    text-align: left;
+    font-size: 0.9rem;
+  }
+}
+@media (min-width: 1200px) {
+  .front-page-post-card-excerpt {
+    text-align: left;
     font-size: 1rem;
+  }
+}
+@media (min-width: 1450px) {
+  .front-page-apartments-post-card {
+    width: 21.2%;
+  }
+
+  .front-page-apartments-post-card:nth-child(3n) {
+    margin-right: 5%;
+  }
+
+  .front-page-apartments-post-card:nth-child(4n) {
+    margin-right: 0rem;
   }
 }
 .mobile-front-page-location-post-container img {
@@ -410,7 +605,7 @@ header {
 
 @media (min-width: 1000px) {
   .front-page-post-grid {
-    top: 80px;
+    top: 54px;
   }
 }
 .location-page-container {
@@ -423,12 +618,11 @@ header {
   width: 90%;
   margin: 1rem auto;
   padding-bottom: 1rem;
-  border-bottom: 4px solid rgba(127, 180, 168, 0.3);
+  border-bottom: 4px solid rgba(0, 183, 141, 0.1);
 }
 
 .location-page-heading {
   color: #006a52;
-  margin-bottom: 1rem;
 }
 
 .location-page-main-info h3 {
@@ -460,7 +654,22 @@ header {
   color: #006a52;
 }
 
+.location-page-post-card-excerpt {
+  width: 90%;
+  margin: 1rem auto 0 auto;
+}
+
+.location-page-post-card-excerpt ul li .fas {
+  color: #43B59C;
+  padding-right: 0.5rem;
+}
+
 @media (min-width: 768px) {
+  .location-page-container {
+    top: 182px;
+    margin-top: 2rem;
+  }
+
   .location-page-post-card-container {
     display: flex;
     flex-wrap: wrap;
@@ -491,18 +700,143 @@ header {
     margin-right: 0rem;
   }
 }
+@media (min-width: 1450px) {
+  .location-page-post-card {
+    width: 21.2%;
+  }
+
+  .location-page-post-card:nth-child(3n) {
+    margin-right: 5%;
+  }
+
+  .location-page-post-card:nth-child(4n) {
+    margin-right: 0rem;
+  }
+}
+.all-apartments-page-container {
+  position: relative;
+  top: 135px;
+  margin-bottom: 1rem;
+}
+
+.all-apartments-page-content {
+  width: 90%;
+  margin: 1rem auto;
+}
+
+.all-apartments-page-post-card-heading a {
+  color: #006a52;
+}
+
+.all-apartments-page-post-card-heading, .all-apartments-page-post-card-excerpt {
+  width: 90%;
+  margin: 1rem auto;
+}
+
+.all-apartments-page-heading a {
+  color: #006a52;
+}
+
+.all-apartments-page-post-card-excerpt {
+  text-align: center;
+  margin-top: 1rem;
+}
+
+.all-apartments-page-post-card-thumbnail {
+  margin: 1rem 0rem;
+}
+
+.all-apartments-page-thumbnail img {
+  width: 100%;
+}
+
+.all-apartments-page-post-card-excerpt {
+  text-align: left;
+}
+
+.all-apartments-page-post-card-excerpt ul li {
+  margin-bottom: 0.5rem;
+}
+
+.all-apartments-page-post-card-excerpt ul li .fas {
+  color: #43B59C;
+  padding-right: 0.5rem;
+}
+
+@media (min-width: 600px) {
+  .all-apartments-page-container {
+    top: 152px;
+  }
+
+  .all-apartments-page-post-card-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    width: 90%;
+    margin: 0 auto;
+  }
+
+  .all-apartments-page-post-card {
+    width: 45%;
+  }
+
+  .all-apartments-page-heading {
+    color: #006a52;
+  }
+
+  .all-apartments-page-post-card-heading a {
+    font-size: 1.5rem;
+  }
+
+  .all-apartments-page-post-card-heading, .all-apartments-page-post-card-excerpt {
+    width: 100%;
+    margin: 1rem 0;
+  }
+}
+@media (min-width: 850px) {
+  .all-apartments-page-post-card {
+    width: 30%;
+  }
+
+  .all-apartments-page-post-card-heading {
+    font-size: 1rem;
+  }
+}
+.page-container {
+  position: relative;
+  top: 191px;
+  width: 90%;
+  margin: 1rem auto;
+}
+
+.page-heading {
+  font-size: 2.2rem;
+  color: #006a52;
+}
+
+.page-container h2 {
+  font-size: 1.3rem;
+}
+
+.page-container p {
+  margin-bottom: 2rem;
+}
+
 svg {
   position: absolute;
-  top: 132px;
+}
+
+.svg-bottom {
+  top: 139px;
 }
 
 .svg-middle {
-  top: 87px;
+  top: 127px;
 }
 
 .svg-top {
-  top: 15px;
-  right: 185px;
+  top: 119px;
+  right: 20px;
 }
 
 .single-post-container {
@@ -537,8 +871,11 @@ svg {
 
 .single-post-main-info {
   margin: 2rem auto;
+}
+
+.single-post-apartment-details {
   padding-bottom: 1rem;
-  border-bottom: 4px solid rgba(127, 180, 168, 0.3);
+  border-bottom: 4px solid rgba(0, 183, 141, 0.1);
 }
 
 .single-post-map {
@@ -546,8 +883,21 @@ svg {
 }
 
 @media (min-width: 768px) {
+  .svg-bottom {
+    top: 179px;
+  }
+
+  .svg-middle {
+    top: 144px;
+  }
+
+  .svg-top {
+    top: 127px;
+    right: 40px;
+  }
+
   .single-post-container {
-    top: 145px;
+    top: 180px;
   }
 
   .single-post-heading {
@@ -555,8 +905,13 @@ svg {
   }
 }
 @media (min-width: 1000px) {
+  .svg-bottom {
+    top: 165px;
+  }
+
   .single-post-container {
-    top: 135px;
+    top: 171px;
+    margin-top: 1rem;
   }
 
   .single-post-heading, .single-post-main-info, .single-post-apartment-details, .single-post-location-details, .single-post-building-details {
@@ -570,7 +925,6 @@ svg {
 
   .single-post-main-info {
     grid-area: postmaininfo;
-    border-bottom: none;
   }
 
   .single-post-image-gallery {
@@ -579,6 +933,7 @@ svg {
 
   .single-post-apartment-details {
     grid-area: apartmentdetails;
+    border-bottom: none;
   }
 
   .single-post-location-details {
@@ -588,7 +943,7 @@ svg {
   }
 
   .single-post-location-details, .single-post-map {
-    background: rgba(127, 180, 168, 0.1);
+    background: rgba(0, 183, 141, 0.1);
   }
 
   .single-post-map {
@@ -610,7 +965,7 @@ svg {
   .single-post-heading-and-info {
     display: grid;
     grid-template-columns: 50% 45%;
-    grid-template-areas: "postheading ." "postmaininfo imagegallery" "locationdetails apartmentdetails" "postmap buildingdetails";
+    grid-template-areas: "postheading ." "postmaininfo imagegallery" "locationdetails apartmentdetails" "postmap apartmentdetails" "postmap buildingdetails";
     justify-content: center;
   }
 
@@ -620,7 +975,7 @@ svg {
 }
 footer {
   position: relative;
-  top: 140px;
+  top: 195px;
   width: 100%;
   background-color: #323031;
   color: #fff;
@@ -636,8 +991,12 @@ footer {
   margin: 0 auto;
 }
 
-.footer-content-nav {
-  margin-right: 2rem;
+footer .menu-main-nav-container, .menu-location-nav-container {
+  margin-bottom: 1rem;
+}
+
+.footer-content-nav a {
+  color: #fff;
 }
 
 footer .copyright {
@@ -651,6 +1010,30 @@ footer .copyright {
   .footer-content {
     width: 80%;
     justify-content: space-evenly;
+  }
+
+  .footer-content-nav {
+    width: 100%;
+  }
+
+  .footer-content-wp-post {
+    width: 50%;
+  }
+
+  .footer-content-nav {
+    display: flex;
+    justify-content: space-evenly;
+    margin-right: 2rem;
+  }
+
+  .footer-content .menu-location-nav-container {
+    position: relative;
+    top: 0;
+  }
+}
+@media (min-width: 1000px) {
+  header {
+    padding-bottom: 0;
   }
 }
 

@@ -17,14 +17,45 @@
     padding-top: 2rem;
   }
 
-  .front-page-apartments-post-card-container h1 {
-    color: $primary-green;
-    margin-bottom: 1rem;
+  .front-page-apartments-post-card-heading-links {
+    display: flex;
     width: 90%;
-    margin: 0rem auto 2rem auto;
+    margin: 0 auto;
+    border-bottom: 3px solid rgba(127,180,168, 0.3);
+    padding-bottom: .3rem;
+    justify-content: space-between;
+    margin-bottom: 2rem;
+  }
+
+  .front-page-apartments-heading {
+    color: $primary-green;
+    font-size: 1.7rem;
+    font-weight: bold;
+    position: relative;
+    top: -5px;
+  }
+
+  .front-page-apartments-post-card-heading-links div {
+    display: flex;
+    font-size: 1.1rem;
+  }
+
+  .front-page-apartments-post-card-heading-links .menu {
+    display: flex;
+  }
+
+  .front-page-apartments-post-card-heading-links .menu .menu-item a {
+    padding: .5rem;
+    margin-right: .5rem;
+    width: 100px;
     text-align: center;
-    border-bottom: 3px solid $border-bottom;
-    padding-bottom: 0.5rem;
+    cursor: pointer;
+    color: #000;
+  }
+
+  .front-page-apartments-post-card-heading-links .menu .menu-item a:hover {
+    background-color: $primary-green;
+    color: #fff;
   }
   
   .front-page-apartments-post-card-wrapper {
@@ -52,12 +83,50 @@
     margin: 1rem 0;
   }
 
-  .front-page-post-card-heading, .front-page-post-card-excerpt {
-    text-align: center;
+  .front-page-post-card-heading {
+    text-align: left;
     font-size: 1.2rem;
   }
 
   .front-page-post-card-excerpt {
+    text-align: left;
+    font-size: 0.8rem;
+  }
+
+  .front-page-post-card-excerpt li {
+    margin-bottom: 0.5rem;
+  }
+
+  .front-page-post-card-excerpt ul li .fas {
+    color: #43B59C;
+    padding-right: 0.5rem;
+  }
+}
+
+@media(min-width: 1100px) {
+  .front-page-post-card-excerpt {
+    text-align: left;
+    font-size: 0.9rem;
+  }
+}
+
+@media(min-width: 1200px) {
+  .front-page-post-card-excerpt {
+    text-align: left;
     font-size: 1rem;
+  }
+}
+
+@media(min-width: 1450px) {
+  .front-page-apartments-post-card {
+    width: 21.2%;
+  }
+
+  .front-page-apartments-post-card:nth-child(3n) {
+    margin-right: 5%;
+  }
+
+  .front-page-apartments-post-card:nth-child(4n) {
+    margin-right: 0rem;
   }
 }

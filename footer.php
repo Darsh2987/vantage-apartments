@@ -2,15 +2,9 @@
       <div class="footer-content">
 
         <nav class="nav footer-content-nav">
-          <ul>
-          <li>Home</li>
-          <li>Locations</li>
-          <li>News</li>
-          <li>FAQs</li>
-          <li>Contact</li>
-          </br>
-          <li>Privacy Policy</li>
-          </ul>
+          <?php wp_nav_menu(array('menu' => 'main-nav')); ?>
+          <?php wp_nav_menu(array('menu' => 'location-nav')); ?>
+          <?php wp_nav_menu(array('menu' => 'privacy-policy')); ?>
         </nav>
 
         <div class="footer-content-wp-post">

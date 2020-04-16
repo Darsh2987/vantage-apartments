@@ -13,7 +13,6 @@
 
 .location-page-heading {
   color: $primary-green;
-  margin-bottom: 1rem;
 }
 
 .location-page-main-info h3 {
@@ -44,7 +43,23 @@
 .location-page-post-card-heading a {
   color: $primary-green;
 }
+
+.location-page-post-card-excerpt {
+  width: 90%;
+  margin: 1rem auto 0 auto;
+}
+
+.location-page-post-card-excerpt ul li .fas {
+  color: #43B59C;
+  padding-right: 0.5rem; 
+}
+
 @media(min-width: 768px) {
+
+  .location-page-container {
+    top: 182px;
+    margin-top: 2rem;
+  }
 
   .location-page-post-card-container {
     display: flex;
@@ -75,6 +90,20 @@
   }
 
   .location-page-post-card:nth-child(3n) {
+    margin-right: 0rem;
+  }
+}
+
+@media(min-width: 1450px) {
+  .location-page-post-card {
+    width: 21.2%;
+  }
+
+  .location-page-post-card:nth-child(3n) {
+    margin-right: 5%;
+  }
+
+  .location-page-post-card:nth-child(4n) {
     margin-right: 0rem;
   }
 }
