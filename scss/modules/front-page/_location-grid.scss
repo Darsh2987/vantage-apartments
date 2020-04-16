@@ -1,11 +1,29 @@
 .front-page-post-grid {
   position: relative;
-  top: 60px;
   margin: 2rem 0;
 }
 
-@media(min-width: 1000px) {
+@media(min-width: 768px) {
   .front-page-post-grid {
-    top: 54px;
+    top: 120px;
+    margin: 2rem 0;
+  }
+}
+
+@media(min-width: 375px) {
+  .front-page-post-grid {
+    top: 40px;
+  }
+}
+
+@media(min-width: 425px) {
+  .front-page-post-grid {
+    top: 75px;
+  }
+}
+
+@media(min-width: 768px) {
+  .front-page-post-grid {
+    top: 115px;
   }
 }

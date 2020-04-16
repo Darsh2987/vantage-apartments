@@ -1,7 +1,7 @@
 /*
-  Theme Name: Vantage Apartments
-  Author Darshan Patel
-  Version 1.0
+  Theme Name: Vantage Apartments 2020
+  Author: Darshan Patel
+  Version: 1.0
 */
 * {
   margin: 0;
@@ -291,19 +291,15 @@ header {
     top: 15px;
   }
 }
-.remove {
-  display: none;
-}
-
 .front-page-opener-container {
   position: relative;
-  top: 50px;
+  top: 0px;
   width: 80%;
   margin: 0 auto;
   padding: 1rem;
   text-align: center;
   text-transform: uppercase;
-  line-height: 2.5rem;
+  line-height: 2rem;
   font-size: 1rem;
   background: rgba(250, 250, 250, 0.8);
   color: black;
@@ -311,9 +307,19 @@ header {
   border-radius: 1%;
 }
 
-@media (min-width: 768px) {
+@media (min-width: 375px) {
+  .front-page-opener-container {
+    top: 40px;
+  }
+}
+@media (min-width: 425px) {
   .front-page-opener-container {
     top: 75px;
+  }
+}
+@media (min-width: 768px) {
+  .front-page-opener-container {
+    top: 115px;
   }
 }
 @media (min-width: 1000px) {
@@ -599,13 +605,28 @@ header {
 }
 .front-page-post-grid {
   position: relative;
-  top: 60px;
   margin: 2rem 0;
 }
 
-@media (min-width: 1000px) {
+@media (min-width: 768px) {
   .front-page-post-grid {
-    top: 54px;
+    top: 120px;
+    margin: 2rem 0;
+  }
+}
+@media (min-width: 375px) {
+  .front-page-post-grid {
+    top: 40px;
+  }
+}
+@media (min-width: 425px) {
+  .front-page-post-grid {
+    top: 75px;
+  }
+}
+@media (min-width: 768px) {
+  .front-page-post-grid {
+    top: 115px;
   }
 }
 .location-page-container {
@@ -860,7 +881,7 @@ svg {
   font-size: 1.5rem;
 }
 
-.single-post-heading, .single-post-main-info, .single-post-apartment-details, .single-post-location-details, .single-post-building-details {
+.single-post-heading, .single-post-main-info, .single-post-apartment-details, .single-post-location-details, .single-post-building-details, .single-post-shop-details, .single-post-transport-details {
   width: 90%;
   margin: 2rem auto;
 }
@@ -873,13 +894,17 @@ svg {
   margin: 2rem auto;
 }
 
-.single-post-apartment-details {
+.single-post-apartment-details, .single-post-building-details, .single-post-shop-details, .single-post-transport-details {
   padding-bottom: 1rem;
   border-bottom: 4px solid rgba(0, 183, 141, 0.1);
 }
 
 .single-post-map {
   width: 100%;
+}
+
+.single-post-transport-details .wp-block-table {
+  margin: 1rem 0;
 }
 
 @media (min-width: 768px) {
@@ -958,6 +983,14 @@ svg {
     margin-top: 1rem;
   }
 
+  .single-post-shop-details {
+    grid-area: shopdetails;
+  }
+
+  .single-post-transport-details {
+    grid-area: transportdetails;
+  }
+
   .single-post-building-details h2 {
     margin-top: 0rem;
   }
@@ -965,12 +998,16 @@ svg {
   .single-post-heading-and-info {
     display: grid;
     grid-template-columns: 50% 45%;
-    grid-template-areas: "postheading ." "postmaininfo imagegallery" "locationdetails apartmentdetails" "postmap apartmentdetails" "postmap buildingdetails";
+    grid-template-areas: "postheading ." "postmaininfo imagegallery" "locationdetails apartmentdetails" "postmap apartmentdetails" "postmap buildingdetails" "transportdetails shopdetails";
     justify-content: center;
   }
 
   .single-post-content p {
     font-size: 1.1rem;
+  }
+
+  .single-post-building-details, .single-post-shop-details, .single-post-transport-details {
+    border-bottom: none;
   }
 }
 footer {

@@ -36,7 +36,7 @@ svg {
   font-size: 1.5rem;
 }
 
-.single-post-heading, .single-post-main-info, .single-post-apartment-details, .single-post-location-details, .single-post-building-details {
+.single-post-heading, .single-post-main-info, .single-post-apartment-details, .single-post-location-details, .single-post-building-details , .single-post-shop-details, .single-post-transport-details{
   width: 90%;
   margin: 2rem auto;
 }
@@ -50,7 +50,7 @@ svg {
   margin: 2rem auto;
 }
 
-.single-post-apartment-details {
+.single-post-apartment-details, .single-post-building-details , .single-post-shop-details, .single-post-transport-details {
   padding-bottom: 1rem;
   border-bottom: 4px solid $border-bottom;
 }
@@ -58,6 +58,10 @@ svg {
 
 .single-post-map {
   width: 100%;
+}
+
+.single-post-transport-details .wp-block-table {
+  margin: 1rem 0;
 }
 
 @media(min-width: 768px) {
@@ -137,6 +141,14 @@ svg {
     margin-top: 1rem;
   }
 
+  .single-post-shop-details {
+    grid-area: shopdetails;
+  }
+
+  .single-post-transport-details {
+    grid-area: transportdetails;
+  }
+
   .single-post-building-details h2 {
     margin-top: 0rem;
   }
@@ -149,11 +161,16 @@ svg {
     "postmaininfo imagegallery"
     "locationdetails apartmentdetails"
     "postmap apartmentdetails"
-    "postmap buildingdetails";
+    "postmap buildingdetails"
+    "transportdetails shopdetails";
     justify-content: center;
   }
 
   .single-post-content p {
     font-size: 1.1rem;
+  }
+
+  .single-post-building-details , .single-post-shop-details, .single-post-transport-details {
+    border-bottom: none;
   }
 }

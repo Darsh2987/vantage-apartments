@@ -2,14 +2,7 @@
 
   <!-- FRONT PAGE IMAGE SLIDER -->
   <section class="image-slider-container">
-    <div class="image-slider">
-      <div class="image-slide image-slider-hampton"></div>
-      <div class="image-slide image-slider-twickenham"></div>
-      <div class="image-slide image-slider-kingston"></div>
-      <div class="image-slide image-slider-teddington"></div>
-      <div class="image-slide image-slider-feltham"></div>
-      <div class="image-slide image-slider-hampton"></div>
-    </div>
+  <?php echo do_shortcode('[metaslider id="270"]'); ?>
   </section>
 
   <div id="front-page-opener" class="front-page-opener-container">
