@@ -1,7 +1,7 @@
 <?php
 
   function vantage_files() {
-    wp_enqueue_script('vantage_js', get_theme_file_uri('/js/app.js'), NULL, '1.0', true);
+    wp_enqueue_script('vantage_js', get_theme_file_uri('/js/app.js'), array('jquery'), NULL, '1.0', true);
     wp_enqueue_style('vantage_main_style', get_stylesheet_uri());
   }
 

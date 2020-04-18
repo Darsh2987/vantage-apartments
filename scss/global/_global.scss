@@ -12,6 +12,22 @@
   list-style: none;
 }
 
+@keyframes fadein {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+
 body {
   font-family: 'Roboto', sans-serif;
 }
+
+.all-apartments-page-container, .location-apartments-container, .single-post-container {
+  animation: fadein 4s;
+}
+

@@ -21,14 +21,14 @@
 	<body>
 
 		<!-- Header - logo, Phone Number, Email, Hamburger Icon and Nav -->
-		<header>
+		<header id="header">
 			<div class="header-content">
 
 				<div class="header-logo-and-contact">
 					<div class="header-logo-and-mobile-nav-icon">
 
 						<div class="header-logo">
-							<a href="<?php echo site_url('/home/'); ?>"><img src="<?php echo get_template_directory_uri(); ?>/images/va-logo-green.jpg" alt="vantage-logo"></a>
+							<a href="<?php echo site_url('/home/'); ?>"><img src="<?php echo get_template_directory_uri(); ?>/images/va-logo-green-trans.png" alt="vantage-logo"></a>
 						</div>
 
 						<!--Mobile Menu Icon -->

@@ -3,7 +3,6 @@
 
         <nav class="nav footer-content-nav">
           <?php wp_nav_menu(array('menu' => 'main-nav')); ?>
-          <?php wp_nav_menu(array('menu' => 'location-nav')); ?>
           <?php wp_nav_menu(array('menu' => 'privacy-policy')); ?>
         </nav>
 

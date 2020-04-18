@@ -1,0 +1,90 @@
+.svg-container {
+  position: relative;
+  bottom: 160px;
+}
+
+svg {
+  position: absolute;
+}
+
+.svg-bottom {
+  top: -9px;
+  right: 0px;
+  height: 103px;
+}
+
+.svg-middle {
+  top: -38px;
+  right: 0;
+  height: 123px;
+}
+
+.svg-top {
+  top: -35px;
+  right: 59px;
+  height: 104px;
+}
+
+@media(min-width: 600px) {
+
+  .svg-container {
+    position: relative;
+    bottom: 123px;
+  }
+  
+  .svg-bottom {
+    top: -21px;
+    height: 215px;
+  }
+  
+  .svg-middle {
+    top: -48px;
+    height: 235px;
+  }
+  
+  .svg-top {
+    top: -58px;
+    right: 59px;
+    height: 224px;
+  }
+
+}
+
+@media(min-width: 750px) {
+
+  .svg-container {
+    position: relative;
+    bottom: 172px;
+  }
+
+  .svg-bottom {
+    top: -59px;
+    height: 336px;
+  }
+  
+  .svg-middle {
+    top: -92px;
+    height: 361px;
+  }
+  
+  .svg-top {
+    top: -86px;
+    right: 59px;
+    height: 338px;
+  }
+}
+
+@media(min-width: 1000px) {
+  .svg-bottom {
+    height: 372px;
+  }
+  
+  .svg-middle {
+    height: 394px;
+  }
+  
+  .svg-top {
+    height: 374px;
+  }
+  
+}

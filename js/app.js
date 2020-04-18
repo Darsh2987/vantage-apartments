@@ -11,18 +11,29 @@ window.addEventListener("load", function() {
       if (nav.classList.contains("nav--show")) {
         nav.classList.remove("nav--show");
       } else {
-        nav.classList.add("nav--show");s
+        nav.classList.add("nav--show");
       };
     };
   };
 
-  //Funtion to remove "Front-page Opener Post" Div if there is no content.
-  // function removeFrontPageOpener() {
-  //   const frontPageOpener = document.querySelector("#front-page-opener");
-  //   if (frontPageOpener.innerHTML.trim().length === 0) {
-  //     frontPageOpener.classList.add("remove");
-  //   };
-  // };
+
+  function checkPosition() {
+    let scrollPos = 125;
+    const header = document.querySelector('#header');
+
+    let windowY = window.scrollY;
+    if (windowY > scrollPos) {
+      // Scrolling UP
+      header.classList.add('solid-header');
+    } else {
+      // Scrolling DOWN
+      header.classList.remove('solid-header');
+    }
+    scrollPos = windowY;
+  }
+
+  window.addEventListener('scroll', checkPosition);
+  
 
   //Function to create a span with specified class(class to create font-awesome icon) and add it to the targeted list Items.
   function addClassToListItem() {
@@ -41,7 +52,6 @@ window.addEventListener("load", function() {
   }
 
   openNavMenu();
-  // removeFrontPageOpener();
   addClassToListItem();
   getyear()
 

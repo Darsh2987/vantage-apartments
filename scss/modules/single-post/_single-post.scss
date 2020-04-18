@@ -1,23 +1,5 @@
-svg {
-  position: absolute;
-}
-
-.svg-bottom {
-  top: 139px;
-}
-
-.svg-middle {
-  top: 127px;
-}
-
-.svg-top {
-  top: 119px;
-  right: 20px;
-}
-
 .single-post-container {
-  position: relative;
-  top: 140px;
+  margin-top: 10rem;
 }
 
 .single-post-content {
@@ -43,6 +25,7 @@ svg {
 
 .single-post-heading {
   color: $primary-green;
+  z-index: 4;
 }
 
 
@@ -64,23 +47,18 @@ svg {
   margin: 1rem 0;
 }
 
+.single-post-transport-details .wp-block-table td {
+  padding: 0.5rem;
+}
+
+@media(min-width: 600px) {
+
+}
+
 @media(min-width: 768px) {
 
-  .svg-bottom {
-    top: 179px;
-  }
-  
-  .svg-middle {
-    top: 144px;
-  }
-  
-  .svg-top {
-    top: 127px;
-    right: 40px;
-  }
-
   .single-post-container {
-    top: 180px;
+    margin-top: 14rem;
   }
 
   .single-post-heading {
@@ -89,13 +67,9 @@ svg {
 }
 
 @media(min-width: 1000px) {
-  .svg-bottom {
-    top: 165px;
-  }
-
+  
   .single-post-container {
-    top: 171px;
-    margin-top: 1rem;
+    margin-top: 14rem;
   }
 
   .single-post-heading, .single-post-main-info, .single-post-apartment-details, .single-post-location-details, .single-post-building-details {

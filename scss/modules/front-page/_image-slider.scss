@@ -1,96 +1,12 @@
-@keyframes slider {
-  
-  0% {
-  	left: 0%;
-  }
-
-  15% {
-  	left: 0%;
-  }
-
-  20% {
-  	left: -100%;
-  }
-
-  35% {
-  	left: -100%;
-  }
-
-  40% {
-  	left: -200%;
-  }
-
-  55% {
-    left: -200%;
-  }
-
-  60% {
-  	left: -300%;
-  }
-
-  75% {
-  	left: -300%;
-  }
-
-  80% {
-  	left: -400%;
-  }
-
-  95% {
-  	left: -400%;
-  }
-
-  100% { 
-    left: -500%
-  }
-}
 
 .image-slider-container {
   overflow: hidden;
   position: relative;
-  top: 167px;
-  height: 300px;
+  top: 72px;
 }
 
-.image-slider {
-  width: 600%;
-  position: relative;
-	margin: 0;
-	left: 0;
-  animation: 20s slider infinite ease-in-out;
-}
-
-.image-slide {
-  width: 16.666%;
-  float: left;
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center;
-  height: 50vh;
-}
-
-.image-slider-hampton {
-  background-image: url("images/image-slider/image-slider-hampton.jpg");
-}
-
-.image-slider-twickenham {
-  background-image: url("images/image-slider/image-slider-twickenham.jpg");
-}
-
-.image-slider-kingston {
-  background-image: url("images/image-slider/image-slider-kingston.jpg");
-}
-
-.image-slider-teddington {
-  background-image: url("images/image-slider/image-slider-teddington.jpg");
-}
-
-.image-slider-feltham {
-  background-image: url("images/image-slider/image-slider-feltham.jpg");
-}
-
-@media(min-width:1200px) {
+@media(min-width: 768px) {
   .image-slider-container {
-    height: 400px;
+    height: 350px;
   }
 }

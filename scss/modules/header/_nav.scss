@@ -15,7 +15,6 @@
     justify-content: center;
     align-items: center;
     text-align: center;
-    font-size: 1.5rem;
   }
 
   .nav--show {
@@ -25,13 +24,17 @@
     z-index: 2;
   }
 
+  .main-nav .nav-phone, .main-nav .nav-email {
+    font-size: 0.9rem;
+  }
+
   .mobile-nav-icon {
     z-index: 3;
     position: relative;
   }
 
   .header-main-nav .main-nav, .header-main-nav .menu-location-nav-container {
-    font-size: 1.1rem;
+    font-size: 1rem;
   }
 
   .header-main-nav .main-nav, .header-main-nav .menu-location-nav-container {
@@ -59,7 +62,7 @@
   }
 
   .header-main-nav li {
-    margin-bottom: 1rem;
+    margin-bottom: 0.5rem;
     font-weight: bold;
   }
 
@@ -68,7 +71,7 @@
   }
 
   #menu-location-nav li .sub-menu li a {
-    font-size: 1rem;
+    font-size: 0.8rem;
     color: $secondary-green;
   }
 
