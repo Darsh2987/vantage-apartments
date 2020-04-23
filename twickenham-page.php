@@ -17,11 +17,9 @@
     <?php
       while(have_posts()) {
         the_post(); ?>
-        <div class="location-page-content">
+        <div class="location-page-heading-container">
           <h1 class="location-page-heading"><?php the_title(); ?></h1>
-          <div class="location-page-main-info">
-            <?php echo get_the_content();?>
-          </div>
+          <div class="twickenham-background background-zoom"></div>
         </div>
       <?php }
     ?>
@@ -30,29 +28,43 @@
   <!-- Get and Display ALL TWICKENHAM APARTMENTS into a Grid Layout -->
   <div class="location-apartments-container">
 
-  <div class="all-apartments-page-post-card-wrapper">
-    <?php 
-      $felthamPost = new WP_Query(array(
-        'post_type' => 'post',
-        'post_status' => 'publish',
-        'posts_per_page' => -1,
-        'category_name' => 'twickenham-apartments'
-      ))
-    ?>  
-    <?php
-      while($felthamPost->have_posts()) {
-        $felthamPost->the_post(); ?>
-          <div class="all-apartments-page-post-card">
-            <h3 class="all-apartments-page-post-card-heading"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h3>
-            <p class="all-apartments-page-thumbnail"><a href="<?php the_permalink(); ?>"><?php the_post_thumbnail(); ?></a></p>
-            <div class="all-apartments-page-post-card-excerpt"><?php the_excerpt(); ?></div>
-          </div>
-      <?php }
-    ?>
-  </div>
+    <div class="all-apartments-page-post-card-wrapper">
+      <?php 
+        $felthamPost = new WP_Query(array(
+          'post_type' => 'post',
+          'post_status' => 'publish',
+          'posts_per_page' => -1,
+          'category_name' => 'twickenham-apartments'
+        ))
+      ?>  
+      <?php
+        while($felthamPost->have_posts()) {
+          $felthamPost->the_post(); ?>
+            <div class="all-apartments-page-post-card">
+              <h3 class="all-apartments-page-post-card-heading"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h3>
+              <p class="all-apartments-page-thumbnail"><a href="<?php the_permalink(); ?>"><?php the_post_thumbnail(); ?></a></p>
+              <div class="all-apartments-page-post-card-excerpt"><?php the_excerpt(); ?></div>
+            </div>
+        <?php }
+      ?>
+    </div>
 
   </div>
   <!-- Get and Display ALL TWICKENHAM APARTMENTS into a Grid Layout -->
+
+  <!-- Get and Display the Location Page Title and Content -->
+  <?php
+      while(have_posts()) {
+        the_post(); ?>
+
+        <div class="location-page-content">
+          <div class="location-page-main-info">
+            <?php echo get_the_content();?>
+          </div>
+        </div>
+      <?php }
+    ?>
+    <!-- End of Get and Display the Location Page Title and Content -->
 
   </div>
   <!-- End of Twickenham Location Landing Page -->

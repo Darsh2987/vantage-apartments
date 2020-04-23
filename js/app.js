@@ -52,7 +52,9 @@ window.addEventListener("load", function() {
   }
 
   openNavMenu();
-  addClassToListItem();
+  //addClassToListItem();
   getyear()
+
+  document.querySelector(".background-zoom").classList.add("background-zoomin");
 
 })

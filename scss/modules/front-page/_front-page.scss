@@ -14,6 +14,31 @@
   border-radius: 1%;
 }
 
+.contact-hero {
+  width: 90%;
+  text-align: center;
+  margin:0rem auto;
+  padding: 5rem 0;
+}
+
+.contact-hero img {
+  width: 70%;
+  margin-bottom: 2rem;
+}
+
+.contact-hero p {
+  margin-bottom: 1.5rem;
+}
+
+.contact-hero-phone-number, .contact-hero-email a {
+  color: $primary-green;
+  font-size: 1.2rem;
+}
+
+.contact-hero-phone-number .fas {
+  margin-right: 0.5rem;
+}
+
 @media(min-width: 375px) {
   .front-page-opener-container {
     top: 20px;
@@ -29,5 +54,10 @@
 @media(min-width: 1000px) {
   .front-page-opener-container {
     font-size: 1.3rem;
+  }
+
+  .contact-hero img {
+    width: 600px;
+    margin-bottom: 2rem;
   }
 }

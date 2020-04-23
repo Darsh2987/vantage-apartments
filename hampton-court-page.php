@@ -17,11 +17,9 @@
     <?php
       while(have_posts()) {
         the_post(); ?>
-        <div class="location-page-content">
+        <div class="location-page-heading-container">
           <h1 class="location-page-heading"><?php the_title(); ?></h1>
-          <div class="location-page-main-info">
-            <?php echo get_the_content();?>
-          </div>
+          <div class="hampton-court-background background-zoom"></div>
         </div>
       <?php }
     ?>
@@ -52,6 +50,19 @@
     </div>
   </div>
   <!-- Get and Display ALL HAMPTON COURT APARTMENTS into a Grid Layout -->
+
+  <!-- Get and Display the Location Page Title and Content -->
+  <?php
+      while(have_posts()) {
+        the_post(); ?>
+        <div class="location-page-content">
+          <div class="location-page-main-info">
+            <?php echo get_the_content();?>
+          </div>
+        </div>
+      <?php }
+    ?>
+    <!-- End of Get and Display the Location Page Title and Content -->
 
   </div>
   <!-- End of Hampton Court Location Landing Page -->

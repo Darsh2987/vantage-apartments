@@ -1,5 +1,5 @@
 .location-page-container {
-  margin-top: 10rem;
+  margin-top: 8rem;
   margin-bottom: 1rem;
 }
 
@@ -7,6 +7,14 @@
   position: relative;
   top: 0px;
   margin-bottom: 1rem;
+}
+
+.location-page-container h1 {
+  width: 90%;
+  margin: 0 auto;
+  text-align: center;
+  font-size: 2rem;
+
 }
 
 .location-page-content {
@@ -70,7 +78,7 @@
 @media(min-width: 650px) {
 
   .location-page-container {
-    margin-top: 10rem;
+    margin-top: 8.5rem;
   }
 
   .location-apartments-container {
@@ -85,6 +93,11 @@
     justify-content: space-evenly;
     width: 90%;
     margin: 0 auto;
+  }
+
+  .location-page-content {
+    padding-top: 1rem;
+    border-top: 4px solid rgba(0, 183, 141, 0.1);
   }
 
   .location-page-post-card {
@@ -107,7 +120,12 @@
 @media(min-width: 750px) {
 
   .location-page-container {
-    margin-top: 14rem;
+    margin-top: 12.5rem;
+  }
+
+  .location-page-container h1 {
+    font-size: 3rem;
+  
   }
 }
 
@@ -119,6 +137,10 @@
 }
 
 @media(min-width: 1000px) {
+
+  .location-page-container {
+    margin-top: 10.5rem;
+  }
 
   .location-page-main-info .wp-block-group .wp-block-group__inner-container {
     display: grid;

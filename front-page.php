@@ -48,6 +48,17 @@
 
   </div>
   <!-- Get and Display ALL APARTMENTS ACROSS THE SITE into a Grid Layout -->
+  
+  <div class="contact-front-page-background-container">
+    <div class="contact-hero">
+      <img src="<?php echo get_template_directory_uri(); ?>/images/hero-va-logo-transparent.png" alt="Vantage Apartments">
+      <p class="address"><strong>Head Office:</strong> Portland Road Studios, 51 Portland Road, Kingston upon Thames KT1 2SH</p>
+      <p class="contact-hero-phone-number"><i class="fas fa-phone-alt"></i>020 3773 4899</p>
+      <p class="email-strapline">For further information or to place a booking request at any of our Greater London serviced apartments, please contact us by phone or email</p>
+      <p class="contact-hero-email"><a href="mailto:res@vantageapartments.com"><i class="far fa-envelope"></i>res@vantageapartments.com</a>
+    </div>
+    <div class="contact-front-page-background background-zoom"></div>
+  </div>
 
 <?php get_footer(); ?>
 

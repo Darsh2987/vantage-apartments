@@ -57,7 +57,7 @@ svg {
 @media (min-width: 600px) {
   .svg-container {
     position: relative;
-    bottom: 123px;
+    bottom: 107px;
   }
 
   .svg-bottom {
@@ -79,7 +79,7 @@ svg {
 @media (min-width: 750px) {
   .svg-container {
     position: relative;
-    bottom: 172px;
+    bottom: 175px;
   }
 
   .svg-bottom {
@@ -111,6 +111,54 @@ svg {
     height: 374px;
   }
 }
+.background-zoom {
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: right top;
+  transform: scale(1);
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  position: absolute;
+  top: 0;
+  left: 0;
+  transition: all 15s linear;
+}
+
+.contact-front-page-background-container {
+  position: relative;
+  display: block;
+  overflow: hidden;
+  height: 700px;
+  background-position: center;
+}
+
+.contact-front-page-background {
+  background-image: url("images/background-images/office-background-opacity.jpg");
+}
+
+.location-page-heading-container {
+  position: relative;
+  display: flex;
+  align-items: center;
+  height: 300px;
+  overflow: hidden;
+  background-position: center;
+  margin-bottom: 2rem;
+}
+
+.hampton-court-background {
+  background-image: url("images/background-images/hampton-court-background-opacity.jpg");
+}
+
+.twickenham-background {
+  background-image: url("images/background-images/twickenham-background-opacity.jpg");
+}
+
+.background-zoomin {
+  transform: scale(1.4);
+}
+
 header {
   width: 100%;
   position: fixed;
@@ -184,7 +232,7 @@ header {
 
   .header-phone-number p, .header-email a {
     color: #006a52;
-    font-size: 1rem;
+    font-size: 1.2rem;
     z-index: 2;
   }
 
@@ -411,6 +459,31 @@ header {
   border-radius: 1%;
 }
 
+.contact-hero {
+  width: 90%;
+  text-align: center;
+  margin: 0rem auto;
+  padding: 5rem 0;
+}
+
+.contact-hero img {
+  width: 70%;
+  margin-bottom: 2rem;
+}
+
+.contact-hero p {
+  margin-bottom: 1.5rem;
+}
+
+.contact-hero-phone-number, .contact-hero-email a {
+  color: #006a52;
+  font-size: 1.2rem;
+}
+
+.contact-hero-phone-number .fas {
+  margin-right: 0.5rem;
+}
+
 @media (min-width: 375px) {
   .front-page-opener-container {
     top: 20px;
@@ -424,6 +497,11 @@ header {
 @media (min-width: 1000px) {
   .front-page-opener-container {
     font-size: 1.3rem;
+  }
+
+  .contact-hero img {
+    width: 600px;
+    margin-bottom: 2rem;
   }
 }
 .image-slider-container {
@@ -656,7 +734,7 @@ header {
   }
 }
 .location-page-container {
-  margin-top: 10rem;
+  margin-top: 8rem;
   margin-bottom: 1rem;
 }
 
@@ -664,6 +742,13 @@ header {
   position: relative;
   top: 0px;
   margin-bottom: 1rem;
+}
+
+.location-page-container h1 {
+  width: 90%;
+  margin: 0 auto;
+  text-align: center;
+  font-size: 2rem;
 }
 
 .location-page-content {
@@ -726,7 +811,7 @@ header {
 
 @media (min-width: 650px) {
   .location-page-container {
-    margin-top: 10rem;
+    margin-top: 8.5rem;
   }
 
   .location-apartments-container {
@@ -741,6 +826,11 @@ header {
     justify-content: space-evenly;
     width: 90%;
     margin: 0 auto;
+  }
+
+  .location-page-content {
+    padding-top: 1rem;
+    border-top: 4px solid rgba(0, 183, 141, 0.1);
   }
 
   .location-page-post-card {
@@ -761,7 +851,11 @@ header {
 }
 @media (min-width: 750px) {
   .location-page-container {
-    margin-top: 14rem;
+    margin-top: 12.5rem;
+  }
+
+  .location-page-container h1 {
+    font-size: 3rem;
   }
 }
 @media (min-width: 850px) {
@@ -770,6 +864,10 @@ header {
   }
 }
 @media (min-width: 1000px) {
+  .location-page-container {
+    margin-top: 10.5rem;
+  }
+
   .location-page-main-info .wp-block-group .wp-block-group__inner-container {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -868,6 +966,7 @@ header {
 
 .all-apartments-page-post-card-excerpt ul li {
   margin-bottom: 0.5rem;
+  list-style: inside;
 }
 
 .all-apartments-page-post-card-excerpt ul li .fas {
@@ -909,6 +1008,10 @@ header {
     font-size: 1rem;
   }
 
+  .all-apartments-page-thumbnail img {
+    height: 170px;
+  }
+
   .all-apartments-page-post-card-heading, .all-apartments-page-post-card-excerpt {
     width: 100%;
     margin: 1rem 0;
@@ -923,14 +1026,66 @@ header {
     font-size: 1rem;
   }
 }
+@media (min-width: 768px) {
+  .all-apartments-page-thumbnail img {
+    height: 200px;
+  }
+}
 @media (min-width: 850px) {
   .all-apartments-page-post-card-wrapper {
     grid-template-columns: repeat(3, 1fr);
+  }
+
+  .all-apartments-page-post-card-heading a {
+    font-size: 0.9rem;
+  }
+
+  .all-apartments-page-thumbnail img {
+    height: 150px;
+  }
+}
+@media (min-width: 1000px) {
+  .all-apartments-page-thumbnail img {
+    height: 170px;
+  }
+}
+@media (min-width: 1100px) {
+  .all-apartments-page-thumbnail img {
+    height: 190px;
   }
 }
 @media (min-width: 1250px) {
   .all-apartments-page-post-card-wrapper {
     grid-template-columns: repeat(4, 1fr);
+  }
+
+  .all-apartments-page-thumbnail img {
+    height: 170px;
+  }
+}
+@media (min-width: 1500px) {
+  .all-apartments-page-thumbnail img {
+    height: 190px;
+  }
+}
+@media (min-width: 1600px) {
+  .all-apartments-page-thumbnail img {
+    height: 205px;
+  }
+}
+@media (min-width: 1800px) {
+  .all-apartments-page-thumbnail img {
+    height: 240px;
+  }
+}
+@media (min-width: 2000px) {
+  .all-apartments-page-thumbnail img {
+    height: 270px;
+  }
+}
+@media (min-width: 2200px) {
+  .all-apartments-page-thumbnail img {
+    height: 300px;
   }
 }
 .page-container {

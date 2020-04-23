@@ -1,0 +1,47 @@
+.background-zoom {
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: right top;
+  transform: scale(1);
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  position: absolute;
+  top: 0;
+  left: 0;
+  transition: all 15s linear;
+}
+
+.contact-front-page-background-container {
+  position: relative;
+  display: block;
+  overflow: hidden;
+  height: 700px;
+  background-position: center;
+}
+
+.contact-front-page-background {
+  background-image: url("images/background-images/office-background-opacity.jpg");
+}
+
+.location-page-heading-container {
+  position: relative;
+  display: flex;
+  align-items: center;
+  height: 300px;
+  overflow: hidden;
+  background-position: center;
+  margin-bottom: 2rem;
+}
+
+.hampton-court-background {
+  background-image: url("images/background-images/hampton-court-background-opacity.jpg");
+}
+
+.twickenham-background {
+  background-image: url("images/background-images/twickenham-background-opacity.jpg");
+}
+
+.background-zoomin {
+  transform: scale(1.4);
+}
